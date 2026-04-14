@@ -31,7 +31,7 @@ Mount this repository next to the main codebase and let the agent search it as p
 ## Suggested prompt contract
 
 ```text
-You have access to an unofficial BACKND knowledge pack.
+You have access to the official BACKND agent knowledge pack.
 Use it to identify the right documentation area quickly.
 Before giving exact API names, method signatures, version-specific setup, or download links, verify the current official BACKND documentation from source_routes.
 ```

@@ -24,7 +24,7 @@ For BACKND Base tasks:
 - consult backnd-base-agent-kit/knowledge-pack/topics first
 - use route_family_id to resolve the official docs area
 - verify exact API names and setup details from source_routes before finalizing code
-- treat backnd-base-agent-kit as an unofficial routing layer, not the source of truth
+- treat backnd-base-agent-kit as the official routing layer, while still verifying exact details from the official BACKND pages in source_routes
 ```
 
 ### Option B: copy the pack into a docs/reference folder

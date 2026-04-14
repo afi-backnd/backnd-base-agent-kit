@@ -1,11 +1,11 @@
 {
   "pack_id": "backnd-base-agent-kit",
   "title": "BACKND Base Agent Kit",
-  "description": "A community-maintained, unofficial knowledge pack for AI agents working with BACKND Base.",
+  "description": "An official BACKND knowledge pack for AI agents working with BACKND Base.",
   "version": "0.1.0",
   "status": "p0-seed",
   "product": "backnd-base",
-  "unofficial": true,
+  "official": true,
   "intended_consumers": [
     "ai-agents",
     "retrieval-pipelines",

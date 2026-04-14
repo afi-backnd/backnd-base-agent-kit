@@ -8,14 +8,14 @@ The project exists because many agent runtimes cannot access a maintainer's loca
 
 ## What this repository is
 
-- a community-maintained, unofficial helper project
+- an official BACKND knowledge pack for coding agents
 - a structured route map for important BACKND Base documentation areas
 - a set of compact topic files describing capabilities, prerequisites, and common pitfalls
 - a starting point for agent adapters, retrieval pipelines, or prompt engineering
 
 ## What this repository is not
 
-- the official BACKND documentation
+- a replacement for the official BACKND documentation site or API reference
 - an SDK distribution
 - a mirror of the official documentation site
 - a guarantee that a route or API detail has not changed upstream
@@ -56,7 +56,7 @@ Recommended retrieval flow:
 2. read the topic JSON from `knowledge-pack/topics/`
 3. inspect the matching route family in `knowledge-pack/routes.json`
 4. fetch the official route only when exactness or freshness is required
-5. answer with explicit awareness that this repository is unofficial
+5. answer with awareness that this repository complements the official BACKND docs and should still defer to upstream pages for exact details
 
 ## Maintenance rule
 

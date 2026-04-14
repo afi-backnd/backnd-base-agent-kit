@@ -21,9 +21,9 @@ Open the target project together with `backnd-base-agent-kit` so Copilot Chat ca
 Then instruct Copilot in repository guidance or chat context:
 
 ```text
-For BACKND tasks, use backnd-base-agent-kit as an unofficial knowledge index.
+For BACKND tasks, use backnd-base-agent-kit as the official agent knowledge index.
 Read topic JSON first, then verify exact API details from the official BACKND routes listed in source_routes.
-Do not treat this repository as the official source of truth.
+Treat this repository as an official routing and summary layer that complements the main documentation site.
 ```
 
 ### Option B: vendor the knowledge pack

@@ -1,8 +1,8 @@
 # backnd-base-agent-kit
 
-A community-maintained, unofficial knowledge pack for using BACKND Base with AI agents.
+An official BACKND knowledge pack for using BACKND Base with AI agents.
 
-This repository is not the official BACKND documentation. It packages route maps, topic metadata, and agent-friendly summaries so an AI system can reason about BACKND Base without depending on a private local docs checkout.
+This repository complements the official BACKND documentation with route maps, topic metadata, and agent-friendly summaries so an AI system can reason about BACKND Base efficiently without depending on a private local docs checkout.
 
 ## Goals
 
@@ -14,7 +14,7 @@ This repository is not the official BACKND documentation. It packages route maps
 ## What is included
 
 - `docs/positioning.md`
-  - project scope, non-affiliation, and content boundaries
+  - project scope, official positioning, and content boundaries
 - `knowledge-pack/manifest.json`
   - pack metadata and included topics
 - `knowledge-pack/routes.json`
@@ -70,7 +70,7 @@ Do not use this repository alone for:
 
 - Replacing the official BACKND documentation
 - Republishing official documentation pages in full
-- Claiming official support or affiliation with BACKND
+- Replacing the official BACKND documentation site or API reference
 
 ## Licensing and third-party materials
 
