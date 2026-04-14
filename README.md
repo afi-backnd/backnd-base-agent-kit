@@ -1,4 +1,4 @@
-# backnd-base-agent-kit
+# Backnd Base Agent Kit
 
 An official BACKND knowledge pack for using BACKND Base with AI agents.
 
