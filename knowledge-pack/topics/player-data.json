@@ -1,0 +1,52 @@
+{
+  "id": "player-data",
+  "title": "BACKND Base player data flows",
+  "product": "backnd-base",
+  "route_family_id": "player-data",
+  "route_family": "/sdk-docs/backend/base/player-data",
+  "source_routes": [
+    "/sdk-docs/backend/base/player-data/get-table-all",
+    "/sdk-docs/backend/base/player-data/insert",
+    "/sdk-docs/backend/base/player-data/get/get-all-data",
+    "/sdk-docs/backend/base/player-data/get/get-my-data",
+    "/sdk-docs/backend/base/player-data/update",
+    "/sdk-docs/backend/base/player-data/update-calc",
+    "/sdk-docs/backend/base/player-data/transaction-read"
+  ],
+  "summary": "Describes per-player data storage in BACKND Base, including inserts, reads, updates, calculations, deletes, and transaction operations for rows that belong to a specific user context.",
+  "capabilities": [
+    "route personal progression and inventory persistence questions to the right document family",
+    "explain that rows are tied to the inserting user and carry reserved ownership fields",
+    "surface data-shape and capacity constraints that affect insert and update behavior",
+    "identify when transaction read or write patterns should be considered"
+  ],
+  "prerequisites": [
+    "A logged-in player context exists for normal player-data flows",
+    "The destination table exists and matches the intended schema rules",
+    "The caller understands whether the row belongs to the current player or must be queried differently"
+  ],
+  "common_pitfalls": [
+    "Confusing player-data with shared game-information storage",
+    "Writing reserved fields as if they were normal application columns",
+    "Ignoring schema, list, map, and large-number constraints when generating insert or update payloads"
+  ],
+  "related_topics": [
+    "game-information",
+    "rank",
+    "all-errors"
+  ],
+  "keywords": [
+    "player data",
+    "insertdata",
+    "get-my-data",
+    "update",
+    "transaction-read",
+    "private table",
+    "reserved columns"
+  ],
+  "last_reviewed": "2026-04-14",
+  "public_notes": [
+    "Player-data guidance should stay explicit about ownership semantics because that affects both retrieval and mutation logic.",
+    "Agents should confirm exact method names and payload constraints from the official docs before generating production code."
+  ]
+}

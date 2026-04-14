@@ -2,8 +2,8 @@
   "pack_id": "backnd-base-agent-kit",
   "title": "BACKND Base Agent Kit",
   "description": "An official BACKND knowledge pack for AI agents working with BACKND Base.",
-  "version": "0.1.0",
-  "status": "p0-seed",
+  "version": "0.2.0",
+  "status": "p1-expanded",
   "product": "backnd-base",
   "official": true,
   "intended_consumers": [
@@ -23,7 +23,12 @@
     "topics/sdk-initialize.json",
     "topics/user-auth.json",
     "topics/all-errors.json",
-    "topics/function-product.json"
+    "topics/function-product.json",
+    "topics/game-information.json",
+    "topics/player-data.json",
+    "topics/rank.json",
+    "topics/receipt.json",
+    "topics/notify.json"
   ],
   "licenses": {
     "repository": "MIT",

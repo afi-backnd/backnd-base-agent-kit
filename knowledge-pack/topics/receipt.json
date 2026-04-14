@@ -1,0 +1,51 @@
+{
+  "id": "receipt",
+  "title": "BACKND Base receipt verification and refund flows",
+  "product": "backnd-base",
+  "route_family_id": "receipt",
+  "route_family": "/sdk-docs/backend/base/receipt",
+  "source_routes": [
+    "/sdk-docs/backend/base/receipt/validate-receipt",
+    "/sdk-docs/backend/base/receipt/unity-iap5-example",
+    "/sdk-docs/backend/base/receipt/receipt/android/setting-google-console",
+    "/sdk-docs/backend/base/receipt/receipt/android/verify",
+    "/sdk-docs/backend/base/receipt/receipt/ios/verify",
+    "/sdk-docs/backend/base/receipt/receipt/onestore/verify",
+    "/sdk-docs/backend/base/receipt/refund/get-refund-list"
+  ],
+  "summary": "Covers in-app purchase receipt validation, platform-specific verification setup, Unity IAP 5 guidance, and refund-related follow-up flows in BACKND Base.",
+  "capabilities": [
+    "route purchase validation questions to the right platform-specific page",
+    "distinguish integrated receipt validation from manual platform-specific flows",
+    "highlight prerequisites such as console setup and login context",
+    "surface refund-related follow-up routes when purchase state reconciliation is needed"
+  ],
+  "prerequisites": [
+    "The relevant store console configuration is complete for the target platform",
+    "The app has access to the correct receipt payload format for the current purchase stack",
+    "The caller knows whether Google Play, iOS, or ONE Store behavior applies"
+  ],
+  "common_pitfalls": [
+    "Generating receipt logic without checking the current Unity IAP version assumptions",
+    "Using platform-specific verification behavior interchangeably across Google Play, iOS, and ONE Store",
+    "Ignoring currency, product ID, or receipt formatting rules that affect successful validation"
+  ],
+  "related_topics": [
+    "function-product",
+    "all-errors"
+  ],
+  "keywords": [
+    "receipt",
+    "validate receipt",
+    "unity iap",
+    "google play",
+    "ios",
+    "onestore",
+    "refund"
+  ],
+  "last_reviewed": "2026-04-14",
+  "public_notes": [
+    "Receipt validation is especially sensitive to version and platform details, so agents should always recheck the official route before producing code or operational guidance.",
+    "This pack intentionally stores routing and caution metadata, not store-console setup text or official receipts examples verbatim."
+  ]
+}

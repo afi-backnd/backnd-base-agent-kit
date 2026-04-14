@@ -1,0 +1,52 @@
+{
+  "id": "game-information",
+  "title": "BACKND Base game information data flows",
+  "product": "backnd-base",
+  "route_family_id": "game-information",
+  "route_family": "/sdk-docs/backend/base/game-information",
+  "source_routes": [
+    "/sdk-docs/backend/base/game-information/get-table-all",
+    "/sdk-docs/backend/base/game-information/insert",
+    "/sdk-docs/backend/base/game-information/get-all/using-indate",
+    "/sdk-docs/backend/base/game-information/get-own-game/get-only-one",
+    "/sdk-docs/backend/base/game-information/update/using-indate",
+    "/sdk-docs/backend/base/game-information/calculate/using-indate",
+    "/sdk-docs/backend/base/game-information/transaction/write-v2"
+  ],
+  "summary": "Covers shared game-data table operations in BACKND Base, including table discovery, insert, query patterns, owner-focused reads, updates, calculations, deletes, and transaction-based workflows.",
+  "capabilities": [
+    "route questions about shared gameplay data storage to the correct document family",
+    "explain the difference between simple CRUD calls and transaction-based workflows",
+    "identify when query, inDate, or owner-focused access patterns are likely needed",
+    "highlight that table design and schema choices affect API behavior and validation"
+  ],
+  "prerequisites": [
+    "SDK initialization and login are already complete when user-scoped behavior matters",
+    "The target table exists in the BACKND console",
+    "The caller knows whether the table is intended for shared game data or per-user data"
+  ],
+  "common_pitfalls": [
+    "Using game-information routes when the data model should really be stored in player-data",
+    "Treating transaction examples as interchangeable with single-call CRUD flows without checking the current API page",
+    "Assuming schema and null-handling behavior without verifying the official docs for the target table design"
+  ],
+  "related_topics": [
+    "player-data",
+    "rank",
+    "all-errors"
+  ],
+  "keywords": [
+    "game data",
+    "game information",
+    "insert",
+    "update",
+    "calculate",
+    "transaction",
+    "where"
+  ],
+  "last_reviewed": "2026-04-14",
+  "public_notes": [
+    "Agents should choose a narrower child route before generating code, because this route family spans CRUD, transactions, and query-building patterns.",
+    "Exact method names and request shapes should be rechecked from the official docs when producing implementation-ready code."
+  ]
+}

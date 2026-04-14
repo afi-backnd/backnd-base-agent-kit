@@ -24,13 +24,23 @@ This repository complements the official BACKND documentation with route maps, t
 - `schemas/topic.schema.json`
   - minimal schema for topic validation
 
-## Initial topic coverage
+## Topic coverage
+
+P0 seed topics:
 
 - startup
 - sdk-initialize
 - user-auth
 - all-errors
 - function-product
+
+P1 expanded topics:
+
+- game-information
+- player-data
+- rank
+- receipt
+- notify
 
 ## How coding agents should use this repository
 

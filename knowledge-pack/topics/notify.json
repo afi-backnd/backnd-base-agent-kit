@@ -1,0 +1,52 @@
+{
+  "id": "notify",
+  "title": "BACKND Base notify and realtime handler flows",
+  "product": "backnd-base",
+  "route_family_id": "notify",
+  "route_family": "/sdk-docs/backend/base/notify",
+  "source_routes": [
+    "/sdk-docs/backend/base/notify/connect-to-notify-server",
+    "/sdk-docs/backend/base/notify/deconnect-to-notify-server",
+    "/sdk-docs/backend/base/notify/is-connected",
+    "/sdk-docs/backend/base/notify/handler-user/guild",
+    "/sdk-docs/backend/base/notify/handler-console/notice",
+    "/sdk-docs/backend/base/notify/handler-console/event",
+    "/sdk-docs/backend/base/notify/handler-etc/reconnect-failed"
+  ],
+  "summary": "Covers realtime notification server connectivity, authorization callbacks, connection-state checks, and handler categories for user, console, and other notification events.",
+  "capabilities": [
+    "route realtime notification questions to the correct connection or handler page",
+    "explain the difference between connecting to the notify server and receiving specific handler events",
+    "highlight authorization and reconnection concerns in notification workflows",
+    "identify whether a request is about user handlers, console handlers, or connection lifecycle state"
+  ],
+  "prerequisites": [
+    "SDK initialization and a valid access token context are available before connecting when authentication is required",
+    "The relevant notification features are enabled in the BACKND console if actual events are expected",
+    "The client sets handlers before or around the connection lifecycle as required by the current docs"
+  ],
+  "common_pitfalls": [
+    "Assuming a successful socket connection means the desired notification feature is enabled",
+    "Ignoring authorization failure reasons such as bad clientAppId or expired accessToken",
+    "Mixing connection lifecycle logic with domain-specific handlers without checking the current official page"
+  ],
+  "related_topics": [
+    "sdk-initialize",
+    "user-auth",
+    "all-errors"
+  ],
+  "keywords": [
+    "notify",
+    "notification",
+    "connect",
+    "onauthorize",
+    "realtime",
+    "handler",
+    "reconnect"
+  ],
+  "last_reviewed": "2026-04-14",
+  "public_notes": [
+    "Realtime handler names and connection behavior should be revalidated from the official docs before generating production event wiring.",
+    "This topic helps agents choose the correct notify sub-area before they fetch exact callback details."
+  ]
+}

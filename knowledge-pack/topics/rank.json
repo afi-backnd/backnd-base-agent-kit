@@ -1,0 +1,51 @@
+{
+  "id": "rank",
+  "title": "BACKND Base rank and leaderboard flows",
+  "product": "backnd-base",
+  "route_family_id": "rank",
+  "route_family": "/sdk-docs/backend/base/rank",
+  "source_routes": [
+    "/sdk-docs/backend/base/rank/user/get-all-sertting",
+    "/sdk-docs/backend/base/rank/user/update",
+    "/sdk-docs/backend/base/rank/user/get-list",
+    "/sdk-docs/backend/base/rank/user/get-my-data",
+    "/sdk-docs/backend/base/rank/guild/get-all-settings",
+    "/sdk-docs/backend/base/rank/guild/get-list"
+  ],
+  "summary": "Covers the current public rank route family for user and guild ranking flows, including settings lookup, score updates, list retrieval, my-rank lookup, reward access, and historical rank queries.",
+  "capabilities": [
+    "route leaderboard questions to user or guild rank pages",
+    "explain that rank updates depend on underlying table rows and rank configuration",
+    "highlight the operational difference between viewing rank data and updating score-linked data",
+    "warn when rank routes are legacy-sensitive and may coexist with newer leaderboard naming"
+  ],
+  "prerequisites": [
+    "The target ranking already exists in the BACKND console",
+    "The caller has the correct rank UUID or a way to retrieve it",
+    "Any required table row for rank-linked updates has already been inserted"
+  ],
+  "common_pitfalls": [
+    "Treating rank updates like normal table updates and expecting leaderboard refresh without the rank-specific API path",
+    "Using the wrong table, row inDate, or rank UUID when updating score-linked data",
+    "Ignoring maintenance windows or counting periods that can block rank updates"
+  ],
+  "related_topics": [
+    "game-information",
+    "player-data",
+    "all-errors"
+  ],
+  "keywords": [
+    "rank",
+    "leaderboard",
+    "urank",
+    "updateuserscore",
+    "guild rank",
+    "rank uuid",
+    "reward"
+  ],
+  "last_reviewed": "2026-04-14",
+  "public_notes": [
+    "Use the rank route family as the stable public reference in this pack, even if newer leaderboard wording appears elsewhere.",
+    "Agents should verify the exact current API page before generating score update code because ranking features are version- and product-sensitive."
+  ]
+}
