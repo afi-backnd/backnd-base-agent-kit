@@ -1,0 +1,33 @@
+{
+  "pack_id": "backnd-base-agent-kit",
+  "title": "BACKND Base Agent Kit",
+  "description": "A community-maintained, unofficial knowledge pack for AI agents working with BACKND Base.",
+  "version": "0.1.0",
+  "status": "p0-seed",
+  "product": "backnd-base",
+  "unofficial": true,
+  "intended_consumers": [
+    "ai-agents",
+    "retrieval-pipelines",
+    "agent-adapters"
+  ],
+  "source_policy": {
+    "official_docs_are_source_of_truth": true,
+    "stores_verbatim_docs": false,
+    "requires_upstream_verification_for_exact_api_details": true
+  },
+  "route_catalog": "routes.json",
+  "topic_schema": "../schemas/topic.schema.json",
+  "topics": [
+    "topics/startup.json",
+    "topics/sdk-initialize.json",
+    "topics/user-auth.json",
+    "topics/all-errors.json",
+    "topics/function-product.json"
+  ],
+  "licenses": {
+    "repository": "MIT",
+    "third_party_notice": "BACKND trademarks and official documentation remain the property of their respective owners and are not relicensed by this repository."
+  },
+  "last_reviewed": "2026-04-14"
+}

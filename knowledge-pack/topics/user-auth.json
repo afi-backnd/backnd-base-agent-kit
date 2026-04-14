@@ -1,0 +1,52 @@
+{
+  "id": "user-auth",
+  "title": "BACKND Base user signup and login flows",
+  "product": "backnd-base",
+  "route_family_id": "user-auth",
+  "route_family": "/sdk-docs/backend/base/user",
+  "source_routes": [
+    "/sdk-docs/backend/base/user/signup-and-login",
+    "/sdk-docs/backend/base/user/custom/signup",
+    "/sdk-docs/backend/base/user/custom/login",
+    "/sdk-docs/backend/base/user/guest/signup-and-login",
+    "/sdk-docs/backend/base/user/federation/signup-and-login",
+    "/sdk-docs/backend/base/user/token/accesstoken"
+  ],
+  "summary": "Provides a routing overview for BACKND Base user entry flows, covering custom, guest, federation, and token-based login paths, plus the runtime fields typically populated after a successful login.",
+  "capabilities": [
+    "route authentication questions to the correct login family",
+    "explain the difference between custom, guest, federation, and token login",
+    "describe what runtime user values become available after login",
+    "highlight token invalidation behavior when the same user signs in on another device"
+  ],
+  "prerequisites": [
+    "SDK initialization has already succeeded",
+    "The selected login mode matches the game's account strategy",
+    "Platform tokens are available when federation login is used"
+  ],
+  "common_pitfalls": [
+    "Confusing signup routes with login-only routes",
+    "Assuming token login works before a token has been issued and stored locally",
+    "Ignoring invalid-token behavior after another device logs in with the same account"
+  ],
+  "related_topics": [
+    "startup",
+    "sdk-initialize",
+    "all-errors"
+  ],
+  "keywords": [
+    "signup",
+    "login",
+    "custom account",
+    "guest account",
+    "federation",
+    "token login",
+    "access token",
+    "refresh token"
+  ],
+  "last_reviewed": "2026-04-14",
+  "public_notes": [
+    "Agents should pick the specific child route that matches the requested account type instead of answering from the umbrella route alone.",
+    "Exact login method names and platform support should be rechecked from the official docs when producing implementation code."
+  ]
+}

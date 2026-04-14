@@ -1,0 +1,45 @@
+{
+  "id": "startup",
+  "title": "BACKND Base startup for Unity",
+  "product": "backnd-base",
+  "route_family_id": "startup",
+  "route_family": "/sdk-docs/backend/base/start-up",
+  "source_routes": [
+    "/sdk-docs/backend/base/start-up"
+  ],
+  "summary": "Covers the first-run Unity integration path for BACKND Base: SDK download, Unity package import, console credential setup, a minimal initialization script, and play-mode verification.",
+  "capabilities": [
+    "identify the initial Unity integration sequence",
+    "locate where Client App ID and Signature Key are expected",
+    "generate a minimal initialization checklist",
+    "explain the normal success signal after setup"
+  ],
+  "prerequisites": [
+    "A Unity project is available",
+    "The project has valid BACKND console credentials",
+    "The BACKND Unity SDK has been downloaded from the official source"
+  ],
+  "common_pitfalls": [
+    "Using stale or missing Client App ID and Signature Key values",
+    "Forgetting that SDK upgrades may reset inspector-stored credentials",
+    "Assuming installation is complete before a play-mode initialization check succeeds"
+  ],
+  "related_topics": [
+    "sdk-initialize",
+    "user-auth",
+    "all-errors"
+  ],
+  "keywords": [
+    "unity",
+    "setup",
+    "installation",
+    "client app id",
+    "signature key",
+    "backend.initialize"
+  ],
+  "last_reviewed": "2026-04-14",
+  "public_notes": [
+    "This topic intentionally summarizes the flow and does not mirror the official page.",
+    "Agents should verify version-specific download links from the official documentation before presenting them as current."
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "id": "function-product",
+  "title": "BACKND Function product overview",
+  "product": "backnd-function",
+  "route_family_id": "function-product",
+  "route_family": "/sdk-docs/function",
+  "source_routes": [
+    "/sdk-docs/function/intro",
+    "/sdk-docs/backend/base/function/execute-function"
+  ],
+  "summary": "Introduces the separate BACKND Function product used to implement backend-executed functions, while noting that it depends on BACKND Base and links back to Base-side function invocation from the client.",
+  "capabilities": [
+    "distinguish BACKND Function from BACKND Base client APIs",
+    "identify the need for a separate function auth key and toolchain",
+    "route questions between function authoring and Base-side function execution",
+    "surface environment assumptions such as Windows tooling and .NET requirements"
+  ],
+  "prerequisites": [
+    "BACKND Base is already in use",
+    "Function product activation and auth key issuance are complete",
+    "The development environment satisfies the current official toolchain requirements"
+  ],
+  "common_pitfalls": [
+    "Assuming BACKND Function can be used independently of BACKND Base",
+    "Treating client-side function invocation docs as the same thing as backend function authoring docs",
+    "Generating toolchain instructions without verifying current official installers and versions"
+  ],
+  "related_topics": [
+    "sdk-initialize",
+    "startup"
+  ],
+  "keywords": [
+    "function",
+    "backend function",
+    "function auth key",
+    "dotnet",
+    "toolchain",
+    "execute function"
+  ],
+  "last_reviewed": "2026-04-14",
+  "public_notes": [
+    "Agents should verify current installer links, IDE support, and runtime requirements from the official Function docs before presenting them as current.",
+    "This repository only stores routing and summary metadata, not the official tool downloads."
+  ]
+}

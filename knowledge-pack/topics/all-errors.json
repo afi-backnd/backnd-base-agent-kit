@@ -1,0 +1,44 @@
+{
+  "id": "all-errors",
+  "title": "BACKND Base error catalog",
+  "product": "backnd-base",
+  "route_family_id": "all-errors",
+  "route_family": "/sdk-docs/backend/base/all-errors",
+  "source_routes": [
+    "/sdk-docs/backend/base/all-errors"
+  ],
+  "summary": "Acts as a broad troubleshooting index organized around HTTP-like status codes and BACKND-specific error names. It is useful for classification, debugging paths, and narrowing a failure to a likely cause family.",
+  "capabilities": [
+    "classify failures by status code family",
+    "map an error name to a likely cause category",
+    "route troubleshooting requests to more specific feature docs",
+    "highlight that exact error messages should be matched against the official catalog"
+  ],
+  "prerequisites": [
+    "A concrete error response, status code, or errorCode is available",
+    "The calling context is known when interpreting the same error across different APIs"
+  ],
+  "common_pitfalls": [
+    "Treating one error name as globally identical across every feature without checking the API context",
+    "Overfitting to translated message text instead of using status and error code together",
+    "Using this catalog alone when the issue is actually a prerequisite failure such as missing initialization or missing credentials"
+  ],
+  "related_topics": [
+    "startup",
+    "sdk-initialize",
+    "user-auth"
+  ],
+  "keywords": [
+    "errors",
+    "statusCode",
+    "errorCode",
+    "InitializeFail",
+    "NotFoundException",
+    "BadUnauthorizedException"
+  ],
+  "last_reviewed": "2026-04-14",
+  "public_notes": [
+    "This topic intentionally stays high level because the upstream error catalog is large and exact message mappings may evolve.",
+    "Agents should quote exact error details only after verifying the current official documentation or the live response payload."
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "id": "sdk-initialize",
+  "title": "BACKND Base SDK initialization",
+  "product": "backnd-base",
+  "route_family_id": "sdk-initialize",
+  "route_family": "/sdk-docs/backend/base/sdk-initialize",
+  "source_routes": [
+    "/sdk-docs/backend/base/sdk-initialize"
+  ],
+  "summary": "Describes the explicit SDK initialization API surface, including synchronous and asynchronous initialization, optional custom settings, and basic success and failure patterns.",
+  "capabilities": [
+    "explain when initialization must occur",
+    "differentiate sync and async initialization options",
+    "outline the role of BackendCustomSetting fields",
+    "warn when exact field names should be rechecked upstream"
+  ],
+  "prerequisites": [
+    "BACKND Base SDK is already installed",
+    "Credentials or equivalent custom settings are available before the first SDK call",
+    "The app initializes the SDK only once during runtime"
+  ],
+  "common_pitfalls": [
+    "Mixing inspector-based settings with BackendCustomSetting assumptions",
+    "Treating initialization as optional before authenticated or data APIs are called",
+    "Hardcoding exact settings without checking the current official docs when freshness matters"
+  ],
+  "related_topics": [
+    "startup",
+    "all-errors",
+    "function-product"
+  ],
+  "keywords": [
+    "initialize",
+    "initializeasync",
+    "backendcustomsetting",
+    "clientappid",
+    "signaturekey",
+    "functionauthkey"
+  ],
+  "last_reviewed": "2026-04-14",
+  "public_notes": [
+    "Exact initialization signatures should be revalidated from the official docs before code generation in a live project.",
+    "This topic is designed for routing and reasoning, not as a replacement for API reference pages."
+  ]
+}

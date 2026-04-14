@@ -1,0 +1,118 @@
+{
+  "product": "backnd-base",
+  "canonical_roots": {
+    "base": "/sdk-docs/backend/base",
+    "function_product": "/sdk-docs/function"
+  },
+  "route_families": [
+    {
+      "id": "startup",
+      "title": "Getting started",
+      "route_family": "/sdk-docs/backend/base/start-up",
+      "notes": [
+        "Entry point for Unity SDK installation and initial console credential setup.",
+        "May include version-sensitive SDK download links."
+      ]
+    },
+    {
+      "id": "sdk-initialize",
+      "title": "SDK initialization",
+      "route_family": "/sdk-docs/backend/base/sdk-initialize",
+      "notes": [
+        "Covers synchronous and asynchronous initialization patterns.",
+        "Important when an agent needs exact initialization behavior or settings fields."
+      ]
+    },
+    {
+      "id": "user-auth",
+      "title": "User and authentication",
+      "route_family": "/sdk-docs/backend/base/user",
+      "notes": [
+        "Includes custom, guest, federation, and token-based login flows."
+      ]
+    },
+    {
+      "id": "game-information",
+      "title": "Game information",
+      "route_family": "/sdk-docs/backend/base/game-information",
+      "notes": [
+        "Shared gameplay data patterns and table operations."
+      ]
+    },
+    {
+      "id": "player-data",
+      "title": "Player data",
+      "route_family": "/sdk-docs/backend/base/player-data",
+      "notes": [
+        "Per-player data operations, reads, writes, and transactions."
+      ]
+    },
+    {
+      "id": "rank",
+      "title": "Rank and leaderboard",
+      "route_family": "/sdk-docs/backend/base/rank",
+      "notes": [
+        "Use rank as the stable public route family for now.",
+        "Leaderboard naming may appear elsewhere, but rank routes are the safer canonical reference."
+      ]
+    },
+    {
+      "id": "receipt",
+      "title": "Receipt and payment",
+      "route_family": "/sdk-docs/backend/base/receipt",
+      "notes": [
+        "Includes platform-specific receipt verification flows."
+      ]
+    },
+    {
+      "id": "function-base",
+      "title": "Base-side function calls",
+      "route_family": "/sdk-docs/backend/base/function",
+      "notes": [
+        "Client-side function listing and invocation from BACKND Base."
+      ]
+    },
+    {
+      "id": "all-errors",
+      "title": "Error catalog",
+      "route_family": "/sdk-docs/backend/base/all-errors",
+      "notes": [
+        "Broad error index for status and error-code driven troubleshooting."
+      ]
+    },
+    {
+      "id": "notify",
+      "title": "Notify and handlers",
+      "route_family": "/sdk-docs/backend/base/notify",
+      "notes": [
+        "Connection lifecycle and handler categories for realtime notifications."
+      ]
+    },
+    {
+      "id": "operation-notice",
+      "title": "Operation notices",
+      "route_family": "/sdk-docs/backend/base/operation/notice",
+      "notes": [
+        "Operational notices surfaced from the platform."
+      ]
+    },
+    {
+      "id": "operation-event",
+      "title": "Operation events",
+      "route_family": "/sdk-docs/backend/base/operation/event",
+      "notes": [
+        "Operational event listing and lookup routes."
+      ]
+    },
+    {
+      "id": "function-product",
+      "title": "BACKND Function product",
+      "route_family": "/sdk-docs/function",
+      "notes": [
+        "Separate product documentation for building and deploying backend functions.",
+        "Depends on BACKND Base and should not be treated as a standalone replacement for Base."
+      ]
+    }
+  ],
+  "last_reviewed": "2026-04-14"
+}
