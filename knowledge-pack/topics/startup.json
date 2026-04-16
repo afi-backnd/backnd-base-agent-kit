@@ -17,7 +17,7 @@
   "prerequisites": [
     "A Unity project is available",
     "The project has valid BACKND console credentials",
-    "The BACKND Unity SDK has been downloaded from the official source"
+    "The BACKND Unity SDK is obtained from the official docs"
   ],
   "common_pitfalls": [
     "Using stale or missing Client App ID and Signature Key values",
@@ -37,9 +37,18 @@
     "signature key",
     "backend.initialize"
   ],
-  "last_reviewed": "2026-04-14",
+  "verification_required_for": [
+    "current SDK download links",
+    "current inspector labels and credential entry steps",
+    "exact initialization example code"
+  ],
+  "verification_strategy": [
+    "Use https://docs.backnd.com plus the source route before presenting current setup steps.",
+    "Treat this topic as routing guidance, not as the final source for version-sensitive installation details."
+  ],
+  "last_reviewed": "2026-04-16",
   "public_notes": [
     "This topic intentionally summarizes the flow and does not mirror the official page.",
-    "Agents should verify version-specific download links from the official documentation before presenting them as current."
+    "Agents should verify version-sensitive setup details from the official documentation before presenting them as current."
   ]
 }

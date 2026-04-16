@@ -15,7 +15,7 @@
   ],
   "summary": "Describes per-player data storage in BACKND Base, including inserts, reads, updates, calculations, deletes, and transaction operations for rows that belong to a specific user context.",
   "capabilities": [
-    "route personal progression and inventory persistence questions to the right document family",
+    "route personal progression and inventory persistence questions to the correct document family",
     "explain that rows are tied to the inserting user and carry reserved ownership fields",
     "surface data-shape and capacity constraints that affect insert and update behavior",
     "identify when transaction read or write patterns should be considered"
@@ -44,7 +44,16 @@
     "private table",
     "reserved columns"
   ],
-  "last_reviewed": "2026-04-14",
+  "verification_required_for": [
+    "exact method names",
+    "current payload constraints",
+    "current reserved-field behavior"
+  ],
+  "verification_strategy": [
+    "Use https://docs.backnd.com plus the narrower source route before generating production payloads or transaction code.",
+    "Do not present payload limits or reserved-field rules as immutable unless freshly verified from the official docs."
+  ],
+  "last_reviewed": "2026-04-16",
   "public_notes": [
     "Player-data guidance should stay explicit about ownership semantics because that affects both retrieval and mutation logic.",
     "Agents should confirm exact method names and payload constraints from the official docs before generating production code."

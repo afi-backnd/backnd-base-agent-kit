@@ -1,41 +1,40 @@
 # Backnd Base Agent Kit
 
-An official BACKND knowledge pack for using BACKND Base with AI agents.
+A community-maintained BACKND knowledge pack for using BACKND Base with AI agents.
 
 This repository complements the official BACKND documentation with route maps, topic metadata, and agent-friendly summaries so an AI system can reason about BACKND Base efficiently without depending on a private local docs checkout.
 
 ## Goals
 
 - Provide a public, reusable knowledge layer for AI agents
-- Preserve links to canonical BACKND documentation routes
+- Preserve canonical BACKND documentation routes in `/sdk-docs/...` form
 - Summarize workflows, prerequisites, and pitfalls without copying official docs verbatim
 - Stay model-agnostic so the pack can be used beyond Claude Code
+- Route agents to `https://docs.backnd.com` when exact or mutable facts must be verified
 
 ## What is included
 
 - `docs/positioning.md`
-  - project scope, official positioning, and content boundaries
+  - project scope, source-of-truth policy, and content boundaries
 - `knowledge-pack/manifest.json`
-  - pack metadata and included topics
+  - pack metadata and verification policy
 - `knowledge-pack/routes.json`
   - canonical route families for BACKND Base and Function docs
 - `knowledge-pack/topics/*.json`
-  - initial topic summaries for agent retrieval
+  - narrow topic summaries for agent retrieval and routing
 - `schemas/topic.schema.json`
   - minimal schema for topic validation
 
 ## Topic coverage
 
-P0 seed topics:
+Current topics:
 
 - startup
 - sdk-initialize
 - user-auth
+- user-federation
 - all-errors
 - function-product
-
-P1 expanded topics:
-
 - game-information
 - player-data
 - rank
@@ -51,8 +50,8 @@ Agents should use it in this order:
 1. classify the request into a topic or route family
 2. read the matching topic JSON from `knowledge-pack/topics/`
 3. use `route_family_id` to join into `knowledge-pack/routes.json`
-4. use `source_routes` to jump to the current official BACKND docs when exactness matters
-5. answer, plan, or generate code after upstream verification
+4. append each `/sdk-docs/...` route to `https://docs.backnd.com` when exactness or freshness matters
+5. answer, plan, or generate code only after upstream verification for mutable facts
 
 Use this repository for:
 
@@ -60,6 +59,7 @@ Use this repository for:
 - prerequisite checks
 - common pitfall detection
 - narrowing the official docs search space
+- deciding what must be reverified before answering
 
 Do not use this repository alone for:
 
@@ -67,20 +67,26 @@ Do not use this repository alone for:
 - exact SDK download links
 - version-sensitive setup steps
 - current console labels
+- current provider support matrices
 - exact error code wording when freshness matters
 
-## Agent-specific examples
+## Design rule
 
-- Claude Code: `examples/claude-code.md`
-- Cursor: `examples/cursor.md`
-- GitHub Copilot: `examples/copilot.md`
-- Codex-style agents: `examples/codex.md`
+This pack should behave like a stable router, not a second source of truth.
+
+That means:
+
+- keep stable structure and workflow guidance in the pack
+- keep mutable facts out of the pack when possible
+- store verification rules for mutable facts instead of storing those facts as long-lived truth
+- defer to the official docs for current provider lists, setup steps, signatures, limits, and labels
 
 ## Non-goals
 
 - Replacing the official BACKND documentation
 - Republishing official documentation pages in full
 - Replacing the official BACKND documentation site or API reference
+- Claiming official endorsement for this repository
 
 ## Licensing and third-party materials
 
@@ -110,8 +116,10 @@ When adding new topics:
 - prefer paraphrased summaries over copied text
 - keep canonical route references in `source_routes`
 - add prerequisites and common pitfalls
+- add `verification_required_for` and `verification_strategy` for mutable details
 - keep topic boundaries narrow and retrieval-friendly
+- do not store mutable support matrices unless there is a deliberate refresh process
 
 ## Status
 
-P0 seed release: public structure, route map, schema, and core topic metadata.
+Version 0.3.0: verification-routed knowledge pack with thin federation routing.

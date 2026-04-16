@@ -43,7 +43,16 @@
     "rank uuid",
     "reward"
   ],
-  "last_reviewed": "2026-04-14",
+  "verification_required_for": [
+    "exact score update APIs",
+    "current rank setting fields",
+    "current reward or historical-rank behavior"
+  ],
+  "verification_strategy": [
+    "Use https://docs.backnd.com plus the narrower source route before generating score update or reward retrieval code.",
+    "Treat this topic as a stable route family hint, not as an exact current feature matrix."
+  ],
+  "last_reviewed": "2026-04-16",
   "public_notes": [
     "Use the rank route family as the stable public reference in this pack, even if newer leaderboard wording appears elsewhere.",
     "Agents should verify the exact current API page before generating score update code because ranking features are version- and product-sensitive."

@@ -1,5 +1,6 @@
 {
   "product": "backnd-base",
+  "official_docs_base_url": "https://docs.backnd.com",
   "canonical_roots": {
     "base": "/sdk-docs/backend/base",
     "function_product": "/sdk-docs/function"
@@ -11,7 +12,7 @@
       "route_family": "/sdk-docs/backend/base/start-up",
       "notes": [
         "Entry point for Unity SDK installation and initial console credential setup.",
-        "May include version-sensitive SDK download links."
+        "Version-sensitive download links must be rechecked from the official docs."
       ]
     },
     {
@@ -20,7 +21,7 @@
       "route_family": "/sdk-docs/backend/base/sdk-initialize",
       "notes": [
         "Covers synchronous and asynchronous initialization patterns.",
-        "Important when an agent needs exact initialization behavior or settings fields."
+        "Exact settings fields and signatures must be rechecked from the official docs."
       ]
     },
     {
@@ -28,7 +29,17 @@
       "title": "User and authentication",
       "route_family": "/sdk-docs/backend/base/user",
       "notes": [
-        "Includes custom, guest, federation, and token-based login flows."
+        "Includes custom, guest, federation, and token-based login flows.",
+        "Use a narrower child route before answering mutable provider or implementation details."
+      ]
+    },
+    {
+      "id": "user-federation",
+      "title": "Federation login",
+      "route_family": "/sdk-docs/backend/base/user/federation",
+      "notes": [
+        "Use this family for federation login, signup, migration, and provider-specific setup questions.",
+        "Supported providers and permission details are mutable and must be rechecked from the official docs."
       ]
     },
     {
@@ -36,7 +47,8 @@
       "title": "Game information",
       "route_family": "/sdk-docs/backend/base/game-information",
       "notes": [
-        "Shared gameplay data patterns and table operations."
+        "Shared gameplay data patterns and table operations.",
+        "Pick a narrower child route before generating production code."
       ]
     },
     {
@@ -44,7 +56,8 @@
       "title": "Player data",
       "route_family": "/sdk-docs/backend/base/player-data",
       "notes": [
-        "Per-player data operations, reads, writes, and transactions."
+        "Per-player data operations, reads, writes, and transactions.",
+        "Payload limits and reserved-field behavior should be rechecked upstream."
       ]
     },
     {
@@ -53,7 +66,7 @@
       "route_family": "/sdk-docs/backend/base/rank",
       "notes": [
         "Use rank as the stable public route family for now.",
-        "Leaderboard naming may appear elsewhere, but rank routes are the safer canonical reference."
+        "Exact rank feature behavior may vary by current product and docs version."
       ]
     },
     {
@@ -61,7 +74,8 @@
       "title": "Receipt and payment",
       "route_family": "/sdk-docs/backend/base/receipt",
       "notes": [
-        "Includes platform-specific receipt verification flows."
+        "Includes platform-specific receipt verification flows.",
+        "Store-specific console setup and payload rules must be rechecked upstream."
       ]
     },
     {
@@ -69,7 +83,8 @@
       "title": "Base-side function calls",
       "route_family": "/sdk-docs/backend/base/function",
       "notes": [
-        "Client-side function listing and invocation from BACKND Base."
+        "Client-side function listing and invocation from BACKND Base.",
+        "Do not confuse this with Function product authoring docs."
       ]
     },
     {
@@ -77,7 +92,8 @@
       "title": "Error catalog",
       "route_family": "/sdk-docs/backend/base/all-errors",
       "notes": [
-        "Broad error index for status and error-code driven troubleshooting."
+        "Broad error index for status and error-code driven troubleshooting.",
+        "Exact error wording should be matched against upstream pages or live payloads."
       ]
     },
     {
@@ -85,7 +101,8 @@
       "title": "Notify and handlers",
       "route_family": "/sdk-docs/backend/base/notify",
       "notes": [
-        "Connection lifecycle and handler categories for realtime notifications."
+        "Connection lifecycle and handler categories for realtime notifications.",
+        "Reconnect and authorization details should be revalidated from the official docs."
       ]
     },
     {
@@ -110,9 +127,9 @@
       "route_family": "/sdk-docs/function",
       "notes": [
         "Separate product documentation for building and deploying backend functions.",
-        "Depends on BACKND Base and should not be treated as a standalone replacement for Base."
+        "Toolchain requirements and downloads must be rechecked from the official docs."
       ]
     }
   ],
-  "last_reviewed": "2026-04-14"
+  "last_reviewed": "2026-04-16"
 }

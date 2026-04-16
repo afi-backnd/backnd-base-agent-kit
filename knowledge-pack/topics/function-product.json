@@ -37,7 +37,16 @@
     "toolchain",
     "execute function"
   ],
-  "last_reviewed": "2026-04-14",
+  "verification_required_for": [
+    "current installer links",
+    "current IDE support",
+    "current runtime and toolchain requirements"
+  ],
+  "verification_strategy": [
+    "Use https://docs.backnd.com plus the source route before presenting current Function setup steps or tool downloads.",
+    "Treat this topic as routing metadata, not as a substitute for current Function product requirements."
+  ],
+  "last_reviewed": "2026-04-16",
   "public_notes": [
     "Agents should verify current installer links, IDE support, and runtime requirements from the official Function docs before presenting them as current.",
     "This repository only stores routing and summary metadata, not the official tool downloads."

@@ -1,11 +1,12 @@
 {
   "pack_id": "backnd-base-agent-kit",
   "title": "BACKND Base Agent Kit",
-  "description": "An official BACKND knowledge pack for AI agents working with BACKND Base.",
-  "version": "0.2.0",
-  "status": "p1-expanded",
+  "description": "A community-maintained BACKND Base knowledge pack for routing agents to the official docs.",
+  "version": "0.3.0",
+  "status": "verification-routed",
   "product": "backnd-base",
-  "official": true,
+  "official": false,
+  "official_docs_base_url": "https://docs.backnd.com",
   "intended_consumers": [
     "ai-agents",
     "retrieval-pipelines",
@@ -14,7 +15,9 @@
   "source_policy": {
     "official_docs_are_source_of_truth": true,
     "stores_verbatim_docs": false,
-    "requires_upstream_verification_for_exact_api_details": true
+    "stores_mutable_support_matrices": false,
+    "requires_upstream_verification_for_exact_api_details": true,
+    "requires_upstream_verification_for_mutable_facts": true
   },
   "route_catalog": "routes.json",
   "topic_schema": "../schemas/topic.schema.json",
@@ -22,6 +25,7 @@
     "topics/startup.json",
     "topics/sdk-initialize.json",
     "topics/user-auth.json",
+    "topics/user-federation.json",
     "topics/all-errors.json",
     "topics/function-product.json",
     "topics/game-information.json",
@@ -34,5 +38,5 @@
     "repository": "MIT",
     "third_party_notice": "BACKND trademarks and official documentation remain the property of their respective owners and are not relicensed by this repository."
   },
-  "last_reviewed": "2026-04-14"
+  "last_reviewed": "2026-04-16"
 }

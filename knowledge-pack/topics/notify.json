@@ -44,7 +44,16 @@
     "handler",
     "reconnect"
   ],
-  "last_reviewed": "2026-04-14",
+  "verification_required_for": [
+    "current handler names",
+    "current connection behavior details",
+    "current authorization or reconnect callbacks"
+  ],
+  "verification_strategy": [
+    "Use https://docs.backnd.com plus the narrower source route before generating production event wiring or callback code.",
+    "Treat this topic as a route selector and risk summary, not as an immutable callback reference."
+  ],
+  "last_reviewed": "2026-04-16",
   "public_notes": [
     "Realtime handler names and connection behavior should be revalidated from the official docs before generating production event wiring.",
     "This topic helps agents choose the correct notify sub-area before they fetch exact callback details."

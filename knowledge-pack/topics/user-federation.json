@@ -1,0 +1,57 @@
+{
+  "id": "user-federation",
+  "title": "BACKND Base federation login and account linking",
+  "product": "backnd-base",
+  "route_family_id": "user-federation",
+  "route_family": "/sdk-docs/backend/base/user/federation",
+  "source_routes": [
+    "/sdk-docs/backend/base/user/federation/signup-and-login",
+    "/sdk-docs/backend/base/user/federation/basic",
+    "/sdk-docs/backend/base/user/federation/migrate-from-custom"
+  ],
+  "summary": "Provides a narrow routing layer for federation login, signup, and migration questions so agents can move from the broad user-auth area to the exact official federation pages before answering mutable provider details.",
+  "capabilities": [
+    "route provider-specific login questions to federation pages",
+    "distinguish federation signup or login from account migration",
+    "highlight that provider support and permissions are mutable upstream facts",
+    "identify when the answer requires official-doc verification before naming providers or setup steps"
+  ],
+  "prerequisites": [
+    "SDK initialization has already succeeded",
+    "A provider-issued token or provider login flow is available before federation auth is attempted",
+    "The game account strategy allows federation login or migration"
+  ],
+  "common_pitfalls": [
+    "Storing provider support lists in the pack as if they were immutable facts",
+    "Answering provider-specific setup questions from the umbrella user-auth topic without checking the federation routes",
+    "Confusing federation login, signup, and migration as the same flow"
+  ],
+  "related_topics": [
+    "user-auth",
+    "sdk-initialize",
+    "all-errors"
+  ],
+  "keywords": [
+    "federation",
+    "social login",
+    "provider",
+    "signup and login",
+    "migration",
+    "platform token"
+  ],
+  "verification_required_for": [
+    "supported federation providers",
+    "provider-specific permission requirements",
+    "provider-specific setup flow",
+    "current migration behavior details"
+  ],
+  "verification_strategy": [
+    "Use https://docs.backnd.com plus the source route before listing current federation providers or provider-specific settings.",
+    "Do not answer provider names from cached pack content alone when freshness matters."
+  ],
+  "last_reviewed": "2026-04-16",
+  "public_notes": [
+    "This is intentionally a thin topic: it improves routing accuracy without storing a mutable provider matrix.",
+    "Agents should verify current provider support from the official federation page before answering exact platform lists."
+  ]
+}

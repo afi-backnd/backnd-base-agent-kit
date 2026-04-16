@@ -44,7 +44,16 @@
     "transaction",
     "where"
   ],
-  "last_reviewed": "2026-04-14",
+  "verification_required_for": [
+    "exact method names",
+    "current request payload shapes",
+    "current transaction examples and limits"
+  ],
+  "verification_strategy": [
+    "Use https://docs.backnd.com plus the narrower source route before generating code for CRUD or transaction flows.",
+    "Treat this topic as a route selector and workflow summary, not as a frozen API contract."
+  ],
+  "last_reviewed": "2026-04-16",
   "public_notes": [
     "Agents should choose a narrower child route before generating code, because this route family spans CRUD, transactions, and query-building patterns.",
     "Exact method names and request shapes should be rechecked from the official docs when producing implementation-ready code."

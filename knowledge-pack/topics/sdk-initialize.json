@@ -7,11 +7,11 @@
   "source_routes": [
     "/sdk-docs/backend/base/sdk-initialize"
   ],
-  "summary": "Describes the explicit SDK initialization API surface, including synchronous and asynchronous initialization, optional custom settings, and basic success and failure patterns.",
+  "summary": "Describes the explicit SDK initialization area, including synchronous and asynchronous initialization paths, optional custom settings, and basic success and failure patterns.",
   "capabilities": [
     "explain when initialization must occur",
     "differentiate sync and async initialization options",
-    "outline the role of BackendCustomSetting fields",
+    "outline the role of custom initialization settings",
     "warn when exact field names should be rechecked upstream"
   ],
   "prerequisites": [
@@ -20,7 +20,7 @@
     "The app initializes the SDK only once during runtime"
   ],
   "common_pitfalls": [
-    "Mixing inspector-based settings with BackendCustomSetting assumptions",
+    "Mixing inspector-based settings with custom-setting assumptions",
     "Treating initialization as optional before authenticated or data APIs are called",
     "Hardcoding exact settings without checking the current official docs when freshness matters"
   ],
@@ -37,7 +37,16 @@
     "signaturekey",
     "functionauthkey"
   ],
-  "last_reviewed": "2026-04-14",
+  "verification_required_for": [
+    "exact initialization signatures",
+    "current custom-setting field names",
+    "current async or sync behavior details"
+  ],
+  "verification_strategy": [
+    "Use https://docs.backnd.com plus the source route before generating implementation-ready initialization code.",
+    "Do not present exact parameter names or signatures from memory when freshness matters."
+  ],
+  "last_reviewed": "2026-04-16",
   "public_notes": [
     "Exact initialization signatures should be revalidated from the official docs before code generation in a live project.",
     "This topic is designed for routing and reasoning, not as a replacement for API reference pages."

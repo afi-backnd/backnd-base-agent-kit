@@ -13,7 +13,7 @@
     "/sdk-docs/backend/base/receipt/receipt/onestore/verify",
     "/sdk-docs/backend/base/receipt/refund/get-refund-list"
   ],
-  "summary": "Covers in-app purchase receipt validation, platform-specific verification setup, Unity IAP 5 guidance, and refund-related follow-up flows in BACKND Base.",
+  "summary": "Covers in-app purchase receipt validation, platform-specific verification setup, Unity IAP guidance, and refund-related follow-up flows in BACKND Base.",
   "capabilities": [
     "route purchase validation questions to the right platform-specific page",
     "distinguish integrated receipt validation from manual platform-specific flows",
@@ -43,7 +43,16 @@
     "onestore",
     "refund"
   ],
-  "last_reviewed": "2026-04-14",
+  "verification_required_for": [
+    "current Unity IAP assumptions",
+    "current platform-specific payload rules",
+    "current store-console setup steps"
+  ],
+  "verification_strategy": [
+    "Use https://docs.backnd.com plus the narrower source route before producing receipt validation code or console setup guidance.",
+    "Treat this topic as routing and caution metadata, not as a stable purchase integration manual."
+  ],
+  "last_reviewed": "2026-04-16",
   "public_notes": [
     "Receipt validation is especially sensitive to version and platform details, so agents should always recheck the official route before producing code or operational guidance.",
     "This pack intentionally stores routing and caution metadata, not store-console setup text or official receipts examples verbatim."

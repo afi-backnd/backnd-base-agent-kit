@@ -32,6 +32,7 @@
   "related_topics": [
     "startup",
     "sdk-initialize",
+    "user-federation",
     "all-errors"
   ],
   "keywords": [
@@ -44,9 +45,18 @@
     "access token",
     "refresh token"
   ],
-  "last_reviewed": "2026-04-14",
+  "verification_required_for": [
+    "current federation provider list",
+    "current token login behavior details",
+    "exact runtime field names and examples"
+  ],
+  "verification_strategy": [
+    "Use https://docs.backnd.com plus the matching source route when the user asks for mutable provider, token, or API details.",
+    "Route provider-specific federation questions to the user-federation topic before answering."
+  ],
+  "last_reviewed": "2026-04-16",
   "public_notes": [
     "Agents should pick the specific child route that matches the requested account type instead of answering from the umbrella route alone.",
-    "Exact login method names and platform support should be rechecked from the official docs when producing implementation code."
+    "Exact login method names, provider support, and implementation details should be rechecked from the official docs when producing code or current-state answers."
   ]
 }

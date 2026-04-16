@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.com/backnd-base-agent-kit/schemas/topic.schema.json",
+  "$id": "https://raw.githubusercontent.com/afi-backnd/backnd-base-agent-kit/main/schemas/topic.schema.json",
   "title": "BACKND Agent Topic",
   "type": "object",
   "additionalProperties": false,
@@ -17,6 +17,8 @@
     "common_pitfalls",
     "related_topics",
     "keywords",
+    "verification_required_for",
+    "verification_strategy",
     "last_reviewed",
     "public_notes"
   ],
@@ -39,14 +41,16 @@
     },
     "route_family": {
       "type": "string",
-      "minLength": 1
+      "minLength": 1,
+      "pattern": "^/sdk-docs/.+"
     },
     "source_routes": {
       "type": "array",
       "minItems": 1,
       "items": {
         "type": "string",
-        "minLength": 1
+        "minLength": 1,
+        "pattern": "^/sdk-docs/.+"
       }
     },
     "summary": {
@@ -86,6 +90,22 @@
       }
     },
     "keywords": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "verification_required_for": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "verification_strategy": {
       "type": "array",
       "minItems": 1,
       "items": {
