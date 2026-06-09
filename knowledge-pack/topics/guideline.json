@@ -1,0 +1,58 @@
+{
+  "id": "guideline",
+  "title": "BACKND Base implementation guideline (step-by-step)",
+  "product": "backnd-base",
+  "route_family_id": "guideline",
+  "route_family": "/sdk-docs/backend/base/guideline",
+  "source_routes": [
+    "/sdk-docs/backend/base/guideline/new-user/signup",
+    "/sdk-docs/backend/base/guideline/new-user/login",
+    "/sdk-docs/backend/base/guideline/game-information/insert",
+    "/sdk-docs/backend/base/guideline/coupon/use-and-save",
+    "/sdk-docs/backend/base/guideline/friend/request",
+    "/sdk-docs/backend/base/guideline/guild/create"
+  ],
+  "summary": "Step-by-step onboarding guideline that stitches core BACKND Base features into end-to-end flows (new-user signup/login/nickname, game-information, rank, chart, post, coupon, game-log, friend, guild), each with copyable all-code samples.",
+  "capabilities": [
+    "route end-to-end 'how do I implement X' questions to a guided walkthrough",
+    "sequence prerequisite steps such as init and login before a feature",
+    "point to all-code sample pages for a feature flow",
+    "distinguish guideline walkthroughs from per-function reference topics"
+  ],
+  "prerequisites": [
+    "SDK is installed and initialized (see startup and sdk-initialize)",
+    "A login flow is in place before feature-specific steps"
+  ],
+  "common_pitfalls": [
+    "Treating guideline sample code as the exact current API instead of verifying the feature topic",
+    "Skipping the init and login prerequisite steps the guideline assumes",
+    "Following the rank walkthrough for new work instead of the current leaderboard topic"
+  ],
+  "related_topics": [
+    "startup",
+    "user-auth",
+    "game-information",
+    "leaderboard"
+  ],
+  "keywords": [
+    "guideline",
+    "가이드",
+    "구현 예제",
+    "step-by-step",
+    "new user",
+    "all-code"
+  ],
+  "verification_required_for": [
+    "exact sample code and method names",
+    "whether a walkthrough step matches the current feature API"
+  ],
+  "verification_strategy": [
+    "Use https://docs.backnd.com plus the source route, and cross-check the matching reference topic before copying sample code.",
+    "Prefer the leaderboard topic over the guideline rank walkthrough for new ranking work."
+  ],
+  "last_reviewed": "2026-06-09",
+  "public_notes": [
+    "Guideline pages are onboarding walkthroughs, not the API reference; verify exact calls against the feature topic.",
+    "This topic improves routing for end-to-end implementation questions."
+  ]
+}

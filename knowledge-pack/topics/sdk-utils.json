@@ -1,0 +1,58 @@
+{
+  "id": "sdk-utils",
+  "title": "BACKND Base SDK utilities",
+  "product": "backnd-base",
+  "route_family_id": "sdk-utils",
+  "route_family": "/sdk-docs/backend/base/sdk-utils",
+  "source_routes": [
+    "/sdk-docs/backend/base/sdk-utils/get-servertime",
+    "/sdk-docs/backend/base/sdk-utils/get-project-status",
+    "/sdk-docs/backend/base/sdk-utils/get-project-version",
+    "/sdk-docs/backend/base/sdk-utils/get-hash/by-function",
+    "/sdk-docs/backend/base/sdk-utils/get-hash/by-unity-inspector",
+    "/sdk-docs/backend/base/sdk-utils/filesystem"
+  ],
+  "summary": "SDK utility helpers: server time (GetServerTime, UTC, usable without login), project status and version checks, signature hash retrieval (by function or Unity inspector), and SDK filesystem helpers.",
+  "capabilities": [
+    "route utility questions (server time, project status/version, hash, filesystem)",
+    "note which utilities work without login (e.g. server time)",
+    "explain hash retrieval for signature verification"
+  ],
+  "prerequisites": [
+    "SDK is initialized",
+    "Login is required only for utilities that need an access token"
+  ],
+  "common_pitfalls": [
+    "Using device local time instead of GetServerTime for server-authoritative timing",
+    "Assuming all utilities require login (some do not)",
+    "Misreading UTC server time as local time"
+  ],
+  "related_topics": [
+    "sdk-initialize",
+    "knowhow",
+    "all-errors"
+  ],
+  "keywords": [
+    "sdk utils",
+    "getservertime",
+    "project status",
+    "project version",
+    "get hash",
+    "filesystem",
+    "utc"
+  ],
+  "verification_required_for": [
+    "exact method names and return fields",
+    "which utilities require login",
+    "hash retrieval specifics"
+  ],
+  "verification_strategy": [
+    "Use https://docs.backnd.com plus the source route before generating utility code.",
+    "Confirm login requirements and return shapes per utility upstream."
+  ],
+  "last_reviewed": "2026-06-09",
+  "public_notes": [
+    "Server time is UTC and usable without login; prefer it for server-authoritative timing.",
+    "Project status/version checks support maintenance and update gating."
+  ]
+}

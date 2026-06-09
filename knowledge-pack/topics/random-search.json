@@ -1,0 +1,58 @@
+{
+  "id": "random-search",
+  "title": "BACKND Base random search (RandomPool)",
+  "product": "backnd-base",
+  "route_family_id": "random-search",
+  "route_family": "/sdk-docs/backend/base/random-search",
+  "source_routes": [
+    "/sdk-docs/backend/base/random-search/difference-with-original",
+    "/sdk-docs/backend/base/random-search/get-random-list",
+    "/sdk-docs/backend/base/random-search/insert-into-group",
+    "/sdk-docs/backend/base/random-search/get-item",
+    "/sdk-docs/backend/base/random-search/delete-own-in-group"
+  ],
+  "summary": "Current random-search system using dedicated RandomPool data instead of scanning the DB: register/delete entries, fetch a random list or item, with optional group segmentation. Replaces legacy Backend.Social.GetRandomUserInfo and Backend.Guild.GetRandomGuildInfoV3, which are deprecated.",
+  "capabilities": [
+    "route random-pick questions to the current RandomPool flow",
+    "explain why RandomPool is more efficient than DB-scan random",
+    "describe group-segmented random pools",
+    "flag the legacy random functions as deprecated"
+  ],
+  "prerequisites": [
+    "RandomPool is enabled/configured in the console",
+    "Entries are explicitly registered into the pool",
+    "SDK is initialized and the user is logged in"
+  ],
+  "common_pitfalls": [
+    "Using legacy Backend.Social.GetRandomUserInfo / GetRandomGuildInfoV3 for new work (deprecated)",
+    "Expecting data to auto-populate the pool (entries must be registered)",
+    "Ignoring group movement of RandomPool data when a user/guild changes group"
+  ],
+  "related_topics": [
+    "find-user",
+    "guild",
+    "group"
+  ],
+  "keywords": [
+    "random search",
+    "랜덤 조회",
+    "randompool",
+    "get-random-list",
+    "group",
+    "deprecated social random"
+  ],
+  "verification_required_for": [
+    "exact RandomPool method names",
+    "group-segmentation behavior",
+    "current status of the legacy random functions"
+  ],
+  "verification_strategy": [
+    "Use https://docs.backnd.com plus the source route before generating random-search code.",
+    "Prefer RandomPool; treat legacy Social/Guild random functions as deprecated and verify before use."
+  ],
+  "last_reviewed": "2026-06-09",
+  "public_notes": [
+    "RandomPool is the current random-search system; legacy DB-scan random is deprecated.",
+    "Pool entries are explicit and can be group-segmented."
+  ]
+}

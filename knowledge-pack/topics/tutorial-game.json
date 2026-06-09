@@ -1,0 +1,54 @@
+{
+  "id": "tutorial-game",
+  "title": "BACKND Base example game tutorials",
+  "product": "backnd-base",
+  "route_family_id": "tutorial-game",
+  "route_family": "/sdk-docs/backend/base/tutorial-game",
+  "source_routes": [
+    "/sdk-docs/backend/base/tutorial-game/example-game-idle-tycoon/introduce",
+    "/sdk-docs/backend/base/tutorial-game/example-game-idle-tycoon/example-idle-tycoon-game",
+    "/sdk-docs/backend/base/tutorial-game/example-game-idle/example-game-idle",
+    "/sdk-docs/backend/base/tutorial-game/example-game-highscore/example-game-highscore"
+  ],
+  "summary": "Complete example-game walkthroughs (Idle Tycoon, Idle, Highscore) showing how BACKND Base features are wired together in a real Unity project: login, tables and leaderboard, chart and probability, IAP and receipt, version check, post and notice.",
+  "capabilities": [
+    "route 'is there a full sample game' questions to the right example project",
+    "map an example game to the BACKND features it demonstrates",
+    "guide learners from a feature to where it appears in a sample"
+  ],
+  "prerequisites": [
+    "Unity and the BACKND SDK are installed",
+    "The learner wants an end-to-end sample rather than a single API"
+  ],
+  "common_pitfalls": [
+    "Copying example-game code as production-ready without verifying current APIs",
+    "Assuming the sample's SDK version matches the current SDK"
+  ],
+  "related_topics": [
+    "guideline",
+    "startup",
+    "leaderboard",
+    "receipt"
+  ],
+  "keywords": [
+    "tutorial",
+    "example game",
+    "예제 게임",
+    "idle tycoon",
+    "highscore",
+    "sample project"
+  ],
+  "verification_required_for": [
+    "exact sample code and SDK version assumptions",
+    "whether a demonstrated API is still current"
+  ],
+  "verification_strategy": [
+    "Use https://docs.backnd.com plus the source route, and verify each demonstrated call against its feature topic before reuse.",
+    "Treat sample code as illustrative, not as the current API contract."
+  ],
+  "last_reviewed": "2026-06-09",
+  "public_notes": [
+    "These are learning samples; exact APIs must be confirmed from feature reference pages.",
+    "Good for onboarding and architecture orientation, not as a frozen code source."
+  ]
+}

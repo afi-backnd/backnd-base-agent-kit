@@ -1,60 +1,52 @@
 {
   "id": "rank",
-  "title": "BACKND Base rank and leaderboard flows",
+  "title": "BACKND Base rank (legacy URank, deprecated)",
   "product": "backnd-base",
   "route_family_id": "rank",
   "route_family": "/sdk-docs/backend/base/rank",
   "source_routes": [
-    "/sdk-docs/backend/base/rank/user/get-all-sertting",
-    "/sdk-docs/backend/base/rank/user/update",
-    "/sdk-docs/backend/base/rank/user/get-list",
-    "/sdk-docs/backend/base/rank/user/get-my-data",
-    "/sdk-docs/backend/base/rank/guild/get-all-settings",
-    "/sdk-docs/backend/base/rank/guild/get-list"
+    "/sdk-docs/backend/base/leaderboard/difference-to-rank"
   ],
-  "summary": "Covers the current public rank route family for user and guild ranking flows, including settings lookup, score updates, list retrieval, my-rank lookup, reward access, and historical rank queries.",
+  "summary": "Legacy URank ranking for user and guild. The official rank documentation pages are unpublished (draft) and return 404; the feature has been superseded by the leaderboard topic. Use this topic only to recognize legacy URank usage and to route migration toward leaderboard.",
   "capabilities": [
-    "route leaderboard questions to user or guild rank pages",
-    "explain that rank updates depend on underlying table rows and rank configuration",
-    "highlight the operational difference between viewing rank data and updating score-linked data",
-    "warn when rank routes are legacy-sensitive and may coexist with newer leaderboard naming"
+    "recognize legacy URank calls in existing code",
+    "redirect new ranking work to the leaderboard topic",
+    "explain that official rank docs pages are unpublished and return 404",
+    "point to the leaderboard difference page for migration guidance"
   ],
   "prerequisites": [
-    "The target ranking already exists in the BACKND console",
-    "The caller has the correct rank UUID or a way to retrieve it",
-    "Any required table row for rank-linked updates has already been inserted"
+    "An existing integration still calls URank functions",
+    "Migration to the leaderboard system is being considered"
   ],
   "common_pitfalls": [
-    "Treating rank updates like normal table updates and expecting leaderboard refresh without the rank-specific API path",
-    "Using the wrong table, row inDate, or rank UUID when updating score-linked data",
-    "Ignoring maintenance windows or counting periods that can block rank updates"
+    "Linking to /sdk-docs/backend/base/rank pages, which are draft and return 404",
+    "Recommending URank for new features instead of leaderboard",
+    "Assuming URank and leaderboard updates write to the same group"
   ],
   "related_topics": [
+    "leaderboard",
     "game-information",
-    "player-data",
-    "all-errors"
+    "player-data"
   ],
   "keywords": [
     "rank",
-    "leaderboard",
     "urank",
     "updateuserscore",
-    "guild rank",
-    "rank uuid",
-    "reward"
+    "랭킹",
+    "legacy rank",
+    "guild rank"
   ],
   "verification_required_for": [
-    "exact score update APIs",
-    "current rank setting fields",
-    "current reward or historical-rank behavior"
+    "whether a specific URank function still exists in the current SDK",
+    "exact migration steps from URank to leaderboard"
   ],
   "verification_strategy": [
-    "Use https://docs.backnd.com plus the narrower source route before generating score update or reward retrieval code.",
-    "Treat this topic as a stable route family hint, not as an exact current feature matrix."
+    "Do not link rank docs pages; they are draft and return 404. Route to https://docs.backnd.com/sdk-docs/backend/base/leaderboard instead.",
+    "Confirm any remaining URank SDK support and migration details from the leaderboard/difference-to-rank page."
   ],
-  "last_reviewed": "2026-04-16",
+  "last_reviewed": "2026-06-09",
   "public_notes": [
-    "Use the rank route family as the stable public reference in this pack, even if newer leaderboard wording appears elsewhere.",
-    "Agents should verify the exact current API page before generating score update code because ranking features are version- and product-sensitive."
+    "Retained only as a legacy router: rank/URank is deprecated in favor of leaderboard.",
+    "All canonical rank doc routes are unpublished; leaderboard is the current source of truth."
   ]
 }

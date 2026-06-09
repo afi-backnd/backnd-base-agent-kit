@@ -1,0 +1,64 @@
+{
+  "id": "knowhow",
+  "title": "BACKND Base SDK usage patterns (knowhow)",
+  "product": "backnd-base",
+  "route_family_id": "knowhow",
+  "route_family": "/sdk-docs/backend/base/knowhow",
+  "source_routes": [
+    "/sdk-docs/backend/base/knowhow/basic",
+    "/sdk-docs/backend/base/knowhow/sync-async/send-queue",
+    "/sdk-docs/backend/base/knowhow/sync-async/sync",
+    "/sdk-docs/backend/base/knowhow/sync-async/async/functions",
+    "/sdk-docs/backend/base/knowhow/param/param",
+    "/sdk-docs/backend/base/knowhow/object-for-return/start",
+    "/sdk-docs/backend/base/knowhow/object-for-return/check-errors",
+    "/sdk-docs/backend/base/knowhow/InDate",
+    "/sdk-docs/backend/base/optimize-cost"
+  ],
+  "summary": "Cross-cutting SDK usage patterns: the BackEnd namespace and Backend singleton, synchronous vs asynchronous vs SendQueue calls, building Param objects, parsing BackendReturnObject (rows, unmarshalling, error checking), inDate semantics, and resolving conflicts with external plugins.",
+  "capabilities": [
+    "explain sync, async, and SendQueue call styles and when each applies",
+    "guide Param construction and BackendReturnObject parsing",
+    "clarify inDate as the row identifier across features",
+    "surface plugin-conflict fixes (proguard, litjson, anti-cheat toolkit)"
+  ],
+  "prerequisites": [
+    "SDK is initialized before any Backend call",
+    "The BackEnd namespace is imported in calling scripts"
+  ],
+  "common_pitfalls": [
+    "Confusing the BackEnd namespace with the Backend singleton (case-sensitive)",
+    "Calling a function via SendQueue when that function does not support it",
+    "Reading return values without checking IsSuccess and status/error codes first"
+  ],
+  "related_topics": [
+    "sdk-initialize",
+    "game-information",
+    "player-data",
+    "all-errors"
+  ],
+  "keywords": [
+    "knowhow",
+    "sendqueue",
+    "sync",
+    "async",
+    "param",
+    "backendreturnobject",
+    "indate",
+    "unmarshal"
+  ],
+  "verification_required_for": [
+    "exact return-object field and method names",
+    "current SendQueue support per function",
+    "current plugin-conflict resolution steps"
+  ],
+  "verification_strategy": [
+    "Use https://docs.backnd.com plus the source route before presenting exact return-parsing or Param code.",
+    "Confirm whether a given function supports SendQueue from its own reference page."
+  ],
+  "last_reviewed": "2026-06-09",
+  "public_notes": [
+    "These are usage patterns shared across features; per-feature exactness still comes from each feature topic.",
+    "Useful before generating any BACKND call code to get call style and return parsing right."
+  ]
+}

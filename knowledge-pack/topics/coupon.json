@@ -1,0 +1,52 @@
+{
+  "id": "coupon",
+  "title": "BACKND Base coupon",
+  "product": "backnd-base",
+  "route_family_id": "coupon",
+  "route_family": "/sdk-docs/backend/base/coupon",
+  "source_routes": [
+    "/sdk-docs/backend/base/coupon/get-list",
+    "/sdk-docs/backend/base/coupon/using",
+    "/sdk-docs/backend/base/coupon/wep-coupon"
+  ],
+  "summary": "Coupon redemption from the client: list console-registered coupons (CouponList covers both new and legacy coupons), use a coupon, and handle web coupons.",
+  "capabilities": [
+    "route coupon listing and redemption questions",
+    "note that listing returns both new and legacy coupons",
+    "distinguish in-game coupon use from web coupons"
+  ],
+  "prerequisites": [
+    "Coupons are registered in the BACKND console",
+    "SDK is initialized and the user is logged in"
+  ],
+  "common_pitfalls": [
+    "Assuming a coupon code format without checking console configuration",
+    "Not handling already-used or expired coupon responses"
+  ],
+  "related_topics": [
+    "post",
+    "receipt",
+    "all-errors"
+  ],
+  "keywords": [
+    "coupon",
+    "쿠폰",
+    "couponlist",
+    "using",
+    "web coupon"
+  ],
+  "verification_required_for": [
+    "exact method names and payloads",
+    "coupon-use error cases",
+    "web coupon flow specifics"
+  ],
+  "verification_strategy": [
+    "Use https://docs.backnd.com plus the source route before generating coupon code.",
+    "Confirm redemption error handling from the official page."
+  ],
+  "last_reviewed": "2026-06-09",
+  "public_notes": [
+    "Coupon listing spans new and legacy coupons.",
+    "Verify redemption and web-coupon specifics upstream."
+  ]
+}

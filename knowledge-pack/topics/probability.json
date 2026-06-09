@@ -1,0 +1,55 @@
+{
+  "id": "probability",
+  "title": "BACKND Base probability (CDN gacha data)",
+  "product": "backnd-base",
+  "route_family_id": "probability",
+  "route_family": "/sdk-docs/backend/base/probability",
+  "source_routes": [
+    "/sdk-docs/backend/base/probability/probability-table",
+    "/sdk-docs/backend/base/probability/probability-content",
+    "/sdk-docs/backend/base/probability/lotto-onetime",
+    "/sdk-docs/backend/base/probability/lotto-by-number"
+  ],
+  "summary": "CDN-delivered probability cards (gacha) via Backend.CDN.Probability: list probability tables, fetch probability content, and draw (lotto one-time or by number). Used for gacha/draw odds distributed and managed in the console.",
+  "capabilities": [
+    "route gacha/probability questions to the CDN probability family",
+    "distinguish a one-time draw from a draw-by-number",
+    "relate probability cards to charts (both under Backend.CDN)"
+  ],
+  "prerequisites": [
+    "Probability tables and files are registered/selected in the console",
+    "SDK is initialized"
+  ],
+  "common_pitfalls": [
+    "Expecting probabilities without a selected probability file (excluded from list)",
+    "Implementing draw odds client-side instead of using console-managed cards",
+    "Calling probability-table via SendQueue (not supported)"
+  ],
+  "related_topics": [
+    "chart",
+    "game-information",
+    "knowhow"
+  ],
+  "keywords": [
+    "probability",
+    "확률",
+    "가챠",
+    "gacha",
+    "backend.cdn.probability",
+    "lotto"
+  ],
+  "verification_required_for": [
+    "exact Backend.CDN.Probability method names",
+    "draw (lotto) behavior and return shape",
+    "console probability-file requirements"
+  ],
+  "verification_strategy": [
+    "Use https://docs.backnd.com plus the source route before generating gacha/draw code.",
+    "Keep odds authoritative in console-managed probability cards; verify draw APIs upstream."
+  ],
+  "last_reviewed": "2026-06-09",
+  "public_notes": [
+    "Probability cards are CDN-distributed under Backend.CDN.Probability.",
+    "Draw odds should be server/console-authoritative, not client-defined."
+  ]
+}

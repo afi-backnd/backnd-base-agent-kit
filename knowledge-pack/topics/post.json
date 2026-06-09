@@ -1,0 +1,60 @@
+{
+  "id": "post",
+  "title": "BACKND Base post / mailbox (UPost)",
+  "product": "backnd-base",
+  "route_family_id": "post",
+  "route_family": "/sdk-docs/backend/base/post",
+  "source_routes": [
+    "/sdk-docs/backend/base/post/difference-to-old",
+    "/sdk-docs/backend/base/post/kinds",
+    "/sdk-docs/backend/base/post/get-list/adminstrator",
+    "/sdk-docs/backend/base/post/get-list/rank",
+    "/sdk-docs/backend/base/post/get-list/user",
+    "/sdk-docs/backend/base/post/get-one/console-post",
+    "/sdk-docs/backend/base/post/send",
+    "/sdk-docs/backend/base/post/delete"
+  ],
+  "summary": "Mailbox system using the current UPost API: fetch posts by kind (administrator, rank, coupon, user, webshop), get one or all, receive/claim, send, and delete. UPost pages oldest-receivable-first and replaces the legacy Social.Post (which only read the latest 100).",
+  "capabilities": [
+    "route mailbox questions to UPost by post kind",
+    "explain UPost paging (oldest-first, accumulates across calls)",
+    "distinguish console posts from user posts",
+    "flag legacy Social.Post limitations vs UPost"
+  ],
+  "prerequisites": [
+    "SDK is initialized and the user is logged in",
+    "Posts exist (console-issued or user-sent)"
+  ],
+  "common_pitfalls": [
+    "Using legacy Social.Post (latest-100 only) instead of UPost",
+    "Expecting all posts on the first UPost call (it accumulates across calls)",
+    "Confusing post kinds (administrator/rank/coupon/user/webshop)"
+  ],
+  "related_topics": [
+    "coupon",
+    "leaderboard",
+    "message"
+  ],
+  "keywords": [
+    "post",
+    "우편",
+    "upost",
+    "mailbox",
+    "getpostlist",
+    "post type"
+  ],
+  "verification_required_for": [
+    "exact UPost method names and PostType values",
+    "paging behavior and limits",
+    "receive/claim semantics"
+  ],
+  "verification_strategy": [
+    "Use https://docs.backnd.com plus the source route before generating mailbox code.",
+    "Prefer UPost over legacy Social.Post; confirm PostType and paging upstream."
+  ],
+  "last_reviewed": "2026-06-09",
+  "public_notes": [
+    "UPost is the current mailbox API; Social.Post is legacy (latest-100 only).",
+    "UPost paging is oldest-first and accumulates across calls."
+  ]
+}

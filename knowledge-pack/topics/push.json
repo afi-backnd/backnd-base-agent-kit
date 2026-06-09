@@ -1,0 +1,59 @@
+{
+  "id": "push",
+  "title": "BACKND Base push notifications",
+  "product": "backnd-base",
+  "route_family_id": "push",
+  "route_family": "/sdk-docs/backend/base/push",
+  "source_routes": [
+    "/sdk-docs/backend/base/push/android/active",
+    "/sdk-docs/backend/base/push/android/deactive",
+    "/sdk-docs/backend/base/push/android/night-push",
+    "/sdk-docs/backend/base/push/ios/active",
+    "/sdk-docs/backend/base/push/ios/deactive",
+    "/sdk-docs/backend/base/push/ios/night-push"
+  ],
+  "summary": "Device push registration from the client: register a device token to turn push ON (PutDeviceToken), turn push OFF, and opt in/out of night push, with separate Android and iOS flows. Console-side push setup is required for actual delivery.",
+  "capabilities": [
+    "route push enable/disable and night-push questions to the right platform flow",
+    "explain that push defaults to night-push opt-out",
+    "separate Android and iOS device-token handling"
+  ],
+  "prerequisites": [
+    "Console push configuration is complete for the target platform",
+    "A valid device token is available from the platform",
+    "SDK is initialized and the user is logged in"
+  ],
+  "common_pitfalls": [
+    "Expecting push delivery without console-side push setup",
+    "Reusing Android flow assumptions on iOS (and vice versa)",
+    "Forgetting night-push is opt-out by default"
+  ],
+  "related_topics": [
+    "notify",
+    "user-auth",
+    "all-errors"
+  ],
+  "keywords": [
+    "push",
+    "푸시",
+    "putdevicetoken",
+    "device token",
+    "night push",
+    "android",
+    "ios"
+  ],
+  "verification_required_for": [
+    "exact method names and parameters",
+    "current Android/iOS console setup steps",
+    "night-push behavior details"
+  ],
+  "verification_strategy": [
+    "Use https://docs.backnd.com plus the platform source route before generating push code.",
+    "Verify console push setup separately from SDK calls."
+  ],
+  "last_reviewed": "2026-06-09",
+  "public_notes": [
+    "Client registers the device token; actual push requires console configuration.",
+    "Android and iOS flows differ; verify per platform."
+  ]
+}

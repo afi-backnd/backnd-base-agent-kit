@@ -6,5 +6,8 @@ Thumbs.db
 .vscode/
 .idea/
 
+# Agent tooling
+.serena/
+
 # Logs
 *.log

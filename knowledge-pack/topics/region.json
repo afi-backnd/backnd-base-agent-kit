@@ -1,0 +1,53 @@
+{
+  "id": "region",
+  "title": "BACKND Base region / location",
+  "product": "backnd-base",
+  "route_family_id": "region",
+  "route_family": "/sdk-docs/backend/base/region",
+  "source_routes": [
+    "/sdk-docs/backend/base/region/update-location-properties",
+    "/sdk-docs/backend/base/region/get-my-region"
+  ],
+  "summary": "IP-based location/region info cached in the SDK: UpdateLocationProperties refreshes the cached country info, and get-my-region reads it. Caching is applied at login/token-reissue; auto-load can be enabled via inspector or BackendCustomSetting (autoLoadLocationProperties).",
+  "capabilities": [
+    "route location/region questions to update vs read flows",
+    "explain that cached location applies at login/token-reissue",
+    "note auto-load configuration and VPN caveats"
+  ],
+  "prerequisites": [
+    "SDK is initialized",
+    "Network allows IP-based geolocation (VPN may prevent it)"
+  ],
+  "common_pitfalls": [
+    "Expecting location to update mid-session without login/token-reissue",
+    "Assuming accurate region when a VPN is in use",
+    "Forgetting to enable auto-load when needed"
+  ],
+  "related_topics": [
+    "country-code",
+    "sdk-initialize",
+    "user-auth"
+  ],
+  "keywords": [
+    "region",
+    "location",
+    "지역",
+    "updatelocationproperties",
+    "locationproperties",
+    "country"
+  ],
+  "verification_required_for": [
+    "exact method names and LocationProperties fields",
+    "when caching is applied",
+    "auto-load setting names"
+  ],
+  "verification_strategy": [
+    "Use https://docs.backnd.com plus the source route before generating location code.",
+    "Confirm caching timing and setting names upstream."
+  ],
+  "last_reviewed": "2026-06-09",
+  "public_notes": [
+    "Location is IP-based and applied at login/token-reissue; VPN can break detection.",
+    "Related country enum is in the country-code topic."
+  ]
+}

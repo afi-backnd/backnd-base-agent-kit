@@ -1,0 +1,54 @@
+{
+  "id": "find-user",
+  "title": "BACKND Base find user",
+  "product": "backnd-base",
+  "route_family_id": "find-user",
+  "route_family": "/sdk-docs/backend/base/find-user",
+  "source_routes": [
+    "/sdk-docs/backend/base/find-user/find-by-nickname",
+    "/sdk-docs/backend/base/find-user/find-by-indate",
+    "/sdk-docs/backend/base/find-user/find-by-nickname-v2"
+  ],
+  "summary": "Look up another user's public information by nickname or by gamer inDate. Includes legacy (GetUserInfoByNickName) and v2 lookups; v2 variants are preferred for new work.",
+  "capabilities": [
+    "route user-lookup questions to nickname or inDate variants",
+    "distinguish legacy lookups from v2 variants",
+    "clarify which public user fields are returned"
+  ],
+  "prerequisites": [
+    "SDK is initialized and the user is logged in",
+    "A target nickname or gamer inDate is available"
+  ],
+  "common_pitfalls": [
+    "Using legacy GetUserInfoByNickName for new work instead of the v2 variant",
+    "Assuming private fields are returned by a public lookup",
+    "Expecting a unique result when nicknames are not unique"
+  ],
+  "related_topics": [
+    "user-auth",
+    "friend",
+    "random-search"
+  ],
+  "keywords": [
+    "find user",
+    "유저 검색",
+    "getuserinfobynickname",
+    "find by nickname",
+    "find by indate",
+    "v2"
+  ],
+  "verification_required_for": [
+    "exact method names and returned fields",
+    "legacy vs v2 differences",
+    "nickname uniqueness behavior"
+  ],
+  "verification_strategy": [
+    "Use https://docs.backnd.com plus the source route before generating lookup code.",
+    "Prefer v2 lookups; confirm returned fields upstream."
+  ],
+  "last_reviewed": "2026-06-09",
+  "public_notes": [
+    "Prefer v2 lookups over the legacy nickname API.",
+    "Only public user fields are returned."
+  ]
+}

@@ -61,12 +61,23 @@
       ]
     },
     {
+      "id": "leaderboard",
+      "title": "Leaderboard (current ranking system)",
+      "route_family": "/sdk-docs/backend/base/leaderboard",
+      "notes": [
+        "Current, recommended ranking system. Supports group-segmented leaderboards and unmarshalled return values.",
+        "Use this family for all new ranking work; it has user and guild sub-families.",
+        "The /leaderboard index path is not a page (404). Route to a specific child such as user/get-leaderboard."
+      ]
+    },
+    {
       "id": "rank",
-      "title": "Rank and leaderboard",
+      "title": "Rank (legacy URank, deprecated)",
       "route_family": "/sdk-docs/backend/base/rank",
       "notes": [
-        "Use rank as the stable public route family for now.",
-        "Exact rank feature behavior may vary by current product and docs version."
+        "Legacy URank ranking, superseded by the leaderboard family.",
+        "Official rank docs pages are unpublished (draft) and return 404 — route to leaderboard instead.",
+        "URank.* may still exist in the SDK for older integrations; see leaderboard/difference-to-rank for migration."
       ]
     },
     {
@@ -129,7 +140,186 @@
         "Separate product documentation for building and deploying backend functions.",
         "Toolchain requirements and downloads must be rechecked from the official docs."
       ]
+    },
+    {
+      "id": "guideline",
+      "title": "Implementation guideline (step-by-step)",
+      "route_family": "/sdk-docs/backend/base/guideline",
+      "notes": [
+        "End-to-end onboarding walkthroughs with all-code samples.",
+        "Verify exact calls against the matching feature topic; prefer leaderboard over the rank walkthrough."
+      ]
+    },
+    {
+      "id": "knowhow",
+      "title": "SDK usage patterns",
+      "route_family": "/sdk-docs/backend/base/knowhow",
+      "notes": [
+        "Cross-cutting patterns: sync/async/SendQueue, Param, BackendReturnObject parsing, inDate.",
+        "Category path is not a page; route to a specific child."
+      ]
+    },
+    {
+      "id": "tutorial-game",
+      "title": "Example game tutorials",
+      "route_family": "/sdk-docs/backend/base/tutorial-game",
+      "notes": [
+        "Complete sample games (Idle Tycoon, Idle, Highscore).",
+        "Illustrative code; verify each call against its feature topic."
+      ]
+    },
+    {
+      "id": "common-errors",
+      "title": "Common error handling patterns",
+      "route_family": "/sdk-docs/backend/base/common-errors",
+      "notes": [
+        "How to respond to recurring runtime errors and register handlers.",
+        "Complements the all-errors code catalog."
+      ]
+    },
+    {
+      "id": "cloud-save",
+      "title": "Cloud save (low-cost storage)",
+      "route_family": "/sdk-docs/backend/base/cloud-save",
+      "notes": [
+        "Collection-based file/data storage; no backup, no request logs.",
+        "Steer loss-sensitive data to database or game-information."
+      ]
+    },
+    {
+      "id": "group",
+      "title": "Group data",
+      "route_family": "/sdk-docs/backend/base/group",
+      "notes": [
+        "Console-defined groups; underpins group-segmented leaderboards.",
+        "Distinct from guild membership."
+      ]
+    },
+    {
+      "id": "coupon",
+      "title": "Coupon",
+      "route_family": "/sdk-docs/backend/base/coupon",
+      "notes": [
+        "List (new and legacy), use, and web coupons."
+      ]
+    },
+    {
+      "id": "push",
+      "title": "Push notifications",
+      "route_family": "/sdk-docs/backend/base/push",
+      "notes": [
+        "Device-token registration; separate Android and iOS flows; night-push is opt-out.",
+        "Delivery requires console push setup."
+      ]
+    },
+    {
+      "id": "game-log",
+      "title": "Game log",
+      "route_family": "/sdk-docs/backend/base/game-log",
+      "notes": [
+        "InsertLogV2 (no DB write throughput cost); legacy InsertLog incurs cost."
+      ]
+    },
+    {
+      "id": "chart",
+      "title": "Chart (CDN game data)",
+      "route_family": "/sdk-docs/backend/base/chart",
+      "notes": [
+        "CDN-delivered design data via Backend.CDN.Content, with local caching.",
+        "Category path is not a page; route to a specific child."
+      ]
+    },
+    {
+      "id": "probability",
+      "title": "Probability (CDN gacha)",
+      "route_family": "/sdk-docs/backend/base/probability",
+      "notes": [
+        "CDN-delivered probability cards via Backend.CDN.Probability; console-authoritative odds."
+      ]
+    },
+    {
+      "id": "cash",
+      "title": "Cash / TBC (discontinued)",
+      "route_family": "/sdk-docs/backend/base/cash",
+      "notes": [
+        "TBC is discontinued (SDK 5.18.7 and below only).",
+        "Route new purchase work to the receipt family."
+      ]
+    },
+    {
+      "id": "find-user",
+      "title": "Find user",
+      "route_family": "/sdk-docs/backend/base/find-user",
+      "notes": [
+        "Lookup by nickname or gamer inDate; v2 variants preferred over legacy."
+      ]
+    },
+    {
+      "id": "random-search",
+      "title": "Random search (RandomPool)",
+      "route_family": "/sdk-docs/backend/base/random-search",
+      "notes": [
+        "Current RandomPool system; legacy Social/Guild random functions are deprecated."
+      ]
+    },
+    {
+      "id": "friend",
+      "title": "Friend",
+      "route_family": "/sdk-docs/backend/base/friend",
+      "notes": [
+        "Friend list and request lifecycle (send/receive/accept/refuse/cancel)."
+      ]
+    },
+    {
+      "id": "post",
+      "title": "Post / mailbox (UPost)",
+      "route_family": "/sdk-docs/backend/base/post",
+      "notes": [
+        "Current UPost mailbox (oldest-first paging); legacy Social.Post read latest-100 only.",
+        "Post kinds: administrator, rank, coupon, user, webshop."
+      ]
+    },
+    {
+      "id": "message",
+      "title": "Message (player notes)",
+      "route_family": "/sdk-docs/backend/base/message",
+      "notes": [
+        "1:1 player notes; length limited by console; distinct from post/mailbox."
+      ]
+    },
+    {
+      "id": "guild",
+      "title": "Guild",
+      "route_family": "/sdk-docs/backend/base/guild",
+      "notes": [
+        "Create/join/search and member, guild-master, operator tiers.",
+        "Guild ranking is served by the leaderboard guild family."
+      ]
+    },
+    {
+      "id": "region",
+      "title": "Region / location",
+      "route_family": "/sdk-docs/backend/base/region",
+      "notes": [
+        "IP-based location cached at login/token-reissue; VPN can break detection."
+      ]
+    },
+    {
+      "id": "country-code",
+      "title": "Country code",
+      "route_family": "/sdk-docs/backend/base/country-code",
+      "notes": [
+        "CountryCode enum (196 countries) for console-side country filtering."
+      ]
+    },
+    {
+      "id": "sdk-utils",
+      "title": "SDK utilities",
+      "route_family": "/sdk-docs/backend/base/sdk-utils",
+      "notes": [
+        "Server time, project status/version, signature hash, filesystem; some usable without login."
+      ]
     }
   ],
-  "last_reviewed": "2026-04-16"
+  "last_reviewed": "2026-06-09"
 }

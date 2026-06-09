@@ -1,0 +1,55 @@
+{
+  "id": "cloud-save",
+  "title": "BACKND Base cloud save",
+  "product": "backnd-base",
+  "route_family_id": "cloud-save",
+  "route_family": "/sdk-docs/backend/base/cloud-save",
+  "source_routes": [
+    "/sdk-docs/backend/base/cloud-save/get-collections",
+    "/sdk-docs/backend/base/cloud-save/upload",
+    "/sdk-docs/backend/base/cloud-save/download",
+    "/sdk-docs/backend/base/cloud-save/delete"
+  ],
+  "summary": "Low-cost file/data storage via console-defined collections: list collections, upload, download, and delete. Optimized for cost, so it intentionally does not provide automatic data backup or detailed server request logs.",
+  "capabilities": [
+    "route cloud-save storage questions to upload/download/delete/list flows",
+    "warn that cloud save lacks backup and request logging",
+    "recommend database or game-information for loss-sensitive or audited data"
+  ],
+  "prerequisites": [
+    "A collection is registered in the BACKND console",
+    "SDK is initialized and the user is logged in"
+  ],
+  "common_pitfalls": [
+    "Storing critical or loss-sensitive data in cloud save (no backup)",
+    "Expecting server-side request logs for troubleshooting",
+    "Calling collection-list via SendQueue (not supported)"
+  ],
+  "related_topics": [
+    "player-data",
+    "game-information",
+    "knowhow"
+  ],
+  "keywords": [
+    "cloud save",
+    "클라우드 세이브",
+    "getcollectionnames",
+    "upload",
+    "download",
+    "collection"
+  ],
+  "verification_required_for": [
+    "exact method names and return objects",
+    "current size/quota limits",
+    "current backup and logging policy"
+  ],
+  "verification_strategy": [
+    "Use https://docs.backnd.com plus the source route before generating upload/download code.",
+    "Confirm the no-backup/no-log policy and limits from the official page before recommending cloud save for important data."
+  ],
+  "last_reviewed": "2026-06-09",
+  "public_notes": [
+    "Cloud save is cost-optimized storage without backup or request logs.",
+    "Steer loss-sensitive data to database or game-information."
+  ]
+}

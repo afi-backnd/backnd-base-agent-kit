@@ -1,0 +1,58 @@
+{
+  "id": "friend",
+  "title": "BACKND Base friend",
+  "product": "backnd-base",
+  "route_family_id": "friend",
+  "route_family": "/sdk-docs/backend/base/friend",
+  "source_routes": [
+    "/sdk-docs/backend/base/friend/list-friends",
+    "/sdk-docs/backend/base/friend/request-to-another-user/request",
+    "/sdk-docs/backend/base/friend/request-to-another-user/list-received-request",
+    "/sdk-docs/backend/base/friend/request-to-another-user/apply-request",
+    "/sdk-docs/backend/base/friend/request-to-another-user/refuse-request",
+    "/sdk-docs/backend/base/friend/request-to-another-user/cancel-request",
+    "/sdk-docs/backend/base/friend/delete-friend"
+  ],
+  "summary": "Friend system: list friends (GetFriendList with limit/offset), send a friend request, list sent/received requests, accept/refuse/cancel a request, and delete a friend.",
+  "capabilities": [
+    "route friend list, request, accept/refuse, and delete questions",
+    "explain request lifecycle (send, receive, accept/refuse/cancel)",
+    "describe limit/offset paging for friend lists"
+  ],
+  "prerequisites": [
+    "SDK is initialized and the user is logged in",
+    "Target gamer inDate is known when sending a request"
+  ],
+  "common_pitfalls": [
+    "Confusing sent-request vs received-request lists",
+    "Not handling duplicate or already-friend request responses",
+    "Ignoring paging on large friend lists"
+  ],
+  "related_topics": [
+    "find-user",
+    "message",
+    "notify"
+  ],
+  "keywords": [
+    "friend",
+    "친구",
+    "getfriendlist",
+    "friend request",
+    "accept",
+    "refuse"
+  ],
+  "verification_required_for": [
+    "exact method names and parameters",
+    "request lifecycle error cases",
+    "paging defaults"
+  ],
+  "verification_strategy": [
+    "Use https://docs.backnd.com plus the source route before generating friend code.",
+    "Confirm request lifecycle and error handling upstream."
+  ],
+  "last_reviewed": "2026-06-09",
+  "public_notes": [
+    "Friend requests have a send/receive/accept-refuse-cancel lifecycle.",
+    "Friend-related realtime events relate to the notify topic."
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "id": "country-code",
+  "title": "BACKND Base country code",
+  "product": "backnd-base",
+  "route_family_id": "country-code",
+  "route_family": "/sdk-docs/backend/base/country-code",
+  "source_routes": [
+    "/sdk-docs/backend/base/country-code/all-codes",
+    "/sdk-docs/backend/base/country-code/apply-country-code"
+  ],
+  "summary": "CountryCode enum (under BackEnd.GlobalSupport) covering 196 countries, used to tag users and guilds so the console can filter/search by country. Includes the full code list and how to apply a country code.",
+  "capabilities": [
+    "route country-code questions to the enum list and apply flow",
+    "explain how country codes enable console-side country filtering",
+    "map CountryCode enum to ISO 3166-1 alpha-2"
+  ],
+  "prerequisites": [
+    "BackEnd.GlobalSupport namespace is imported",
+    "SDK is initialized and the user is logged in for apply flows"
+  ],
+  "common_pitfalls": [
+    "Hardcoding a country string instead of the CountryCode enum",
+    "Assuming a code without checking the official 196-country list"
+  ],
+  "related_topics": [
+    "region",
+    "guild",
+    "user-auth"
+  ],
+  "keywords": [
+    "country code",
+    "국가 코드",
+    "countrycode",
+    "globalsupport",
+    "iso 3166"
+  ],
+  "verification_required_for": [
+    "exact enum values for a specific country",
+    "apply-country-code method name and scope"
+  ],
+  "verification_strategy": [
+    "Use https://docs.backnd.com plus the source route to confirm a specific CountryCode value before use.",
+    "Verify the apply flow and where the code is stored upstream."
+  ],
+  "last_reviewed": "2026-06-09",
+  "public_notes": [
+    "CountryCode is an enum under BackEnd.GlobalSupport covering 196 countries.",
+    "Used for console-side country filtering of users and guilds."
+  ]
+}

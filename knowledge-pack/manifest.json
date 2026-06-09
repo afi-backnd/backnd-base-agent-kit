@@ -2,7 +2,7 @@
   "pack_id": "backnd-base-agent-kit",
   "title": "BACKND Base Agent Kit",
   "description": "A community-maintained BACKND Base knowledge pack for routing agents to the official docs.",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "status": "verification-routed",
   "product": "backnd-base",
   "official": false,
@@ -30,13 +30,35 @@
     "topics/function-product.json",
     "topics/game-information.json",
     "topics/player-data.json",
+    "topics/leaderboard.json",
     "topics/rank.json",
     "topics/receipt.json",
-    "topics/notify.json"
+    "topics/notify.json",
+    "topics/guideline.json",
+    "topics/knowhow.json",
+    "topics/tutorial-game.json",
+    "topics/common-errors.json",
+    "topics/cloud-save.json",
+    "topics/group.json",
+    "topics/coupon.json",
+    "topics/push.json",
+    "topics/game-log.json",
+    "topics/chart.json",
+    "topics/probability.json",
+    "topics/cash.json",
+    "topics/find-user.json",
+    "topics/random-search.json",
+    "topics/friend.json",
+    "topics/post.json",
+    "topics/message.json",
+    "topics/guild.json",
+    "topics/region.json",
+    "topics/country-code.json",
+    "topics/sdk-utils.json"
   ],
   "licenses": {
     "repository": "MIT",
     "third_party_notice": "BACKND trademarks and official documentation remain the property of their respective owners and are not relicensed by this repository."
   },
-  "last_reviewed": "2026-04-16"
+  "last_reviewed": "2026-06-09"
 }

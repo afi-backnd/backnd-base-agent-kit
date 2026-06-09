@@ -1,0 +1,63 @@
+{
+  "id": "guild",
+  "title": "BACKND Base guild",
+  "product": "backnd-base",
+  "route_family_id": "guild",
+  "route_family": "/sdk-docs/backend/base/guild",
+  "source_routes": [
+    "/sdk-docs/backend/base/guild/create-and-join/create",
+    "/sdk-docs/backend/base/guild/create-and-join/request-join",
+    "/sdk-docs/backend/base/guild/search/get-all-guild",
+    "/sdk-docs/backend/base/guild/search/get-my-guild",
+    "/sdk-docs/backend/base/guild/goods/donate-forbidden-during-reset-time",
+    "/sdk-docs/backend/base/guild/guild-master/grant-master-role",
+    "/sdk-docs/backend/base/guild/operator/apply-join",
+    "/sdk-docs/backend/base/guild/operator/banish"
+  ],
+  "summary": "Guild system (CreateGuildV4 and related): create and join guilds, search guilds and members, manage guild metadata and goods (with reset-time rules), guild-master role grants, and operator actions (approve/refuse join, banish). Guilds carry goods count and optional country code.",
+  "capabilities": [
+    "route guild create/join/search/management questions to the right sub-family",
+    "distinguish member, guild-master, and operator capabilities",
+    "explain guild goods and reset-time-restricted operations",
+    "relate guild ranking to the leaderboard guild family"
+  ],
+  "prerequisites": [
+    "SDK is initialized and the user is logged in",
+    "Guild settings (goods count, country code) are decided at creation",
+    "Appropriate role (master/operator) for privileged actions"
+  ],
+  "common_pitfalls": [
+    "Trying to change goodsCount after creation (fixed at create time)",
+    "Calling master/operator actions without the required role",
+    "Ignoring reset-time restrictions on goods/metadata changes",
+    "Confusing guild ranking with the leaderboard guild family"
+  ],
+  "related_topics": [
+    "leaderboard",
+    "group",
+    "random-search"
+  ],
+  "keywords": [
+    "guild",
+    "길드",
+    "createguildv4",
+    "guild master",
+    "operator",
+    "goods",
+    "join"
+  ],
+  "verification_required_for": [
+    "exact method names and CreateGuildV4 overloads",
+    "role and permission requirements",
+    "reset-time rules for goods/metadata"
+  ],
+  "verification_strategy": [
+    "Use https://docs.backnd.com plus the narrower source route before generating guild code.",
+    "Confirm role requirements and reset-time rules from the official pages."
+  ],
+  "last_reviewed": "2026-06-09",
+  "public_notes": [
+    "Guild has distinct member, guild-master, and operator capability tiers.",
+    "Guild ranking is served by the leaderboard guild family, not the guild topic."
+  ]
+}

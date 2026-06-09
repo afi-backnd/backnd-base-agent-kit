@@ -1,0 +1,54 @@
+{
+  "id": "group",
+  "title": "BACKND Base group data",
+  "product": "backnd-base",
+  "route_family_id": "group",
+  "route_family": "/sdk-docs/backend/base/group",
+  "source_routes": [
+    "/sdk-docs/backend/base/group/get-table",
+    "/sdk-docs/backend/base/group/get",
+    "/sdk-docs/backend/base/group/get-member",
+    "/sdk-docs/backend/base/group/update"
+  ],
+  "summary": "Read and manage console-defined groups: list group tables, fetch groups (with paging via LastEvaluatedKey), get group members, and update group data. Groups underpin group-segmented features such as segmented leaderboards.",
+  "capabilities": [
+    "route group lookup and membership questions to the group family",
+    "explain paging with LastEvaluatedKey for large group lists",
+    "relate groups to group-segmented leaderboards"
+  ],
+  "prerequisites": [
+    "Groups are configured in the BACKND console",
+    "SDK is initialized and the user is logged in for member-scoped reads"
+  ],
+  "common_pitfalls": [
+    "Calling group list via SendQueue (not supported)",
+    "Ignoring LastEvaluatedKey paging when more than the limit exists",
+    "Conflating group membership with guild membership"
+  ],
+  "related_topics": [
+    "leaderboard",
+    "player-data",
+    "knowhow"
+  ],
+  "keywords": [
+    "group",
+    "그룹",
+    "table.get",
+    "get-member",
+    "lastevaluatedkey"
+  ],
+  "verification_required_for": [
+    "exact method names and return objects",
+    "current paging behavior",
+    "how group segmentation maps to leaderboards"
+  ],
+  "verification_strategy": [
+    "Use https://docs.backnd.com plus the source route before generating group queries.",
+    "Confirm group-to-leaderboard segmentation behavior from the official pages."
+  ],
+  "last_reviewed": "2026-06-09",
+  "public_notes": [
+    "Groups support segmented features; verify exact APIs upstream.",
+    "Distinct from guild membership."
+  ]
+}

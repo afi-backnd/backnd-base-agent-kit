@@ -1,0 +1,57 @@
+{
+  "id": "chart",
+  "title": "BACKND Base chart (CDN game data)",
+  "product": "backnd-base",
+  "route_family_id": "chart",
+  "route_family": "/sdk-docs/backend/base/chart",
+  "source_routes": [
+    "/sdk-docs/backend/base/chart/chart-table",
+    "/sdk-docs/backend/base/chart/chart-content",
+    "/sdk-docs/backend/base/chart/Local/save",
+    "/sdk-docs/backend/base/chart/Local/load",
+    "/sdk-docs/backend/base/chart/Local/update",
+    "/sdk-docs/backend/base/chart/Local/delete"
+  ],
+  "summary": "CDN-delivered design/game data (charts) via Backend.CDN.Content: list chart tables, fetch chart content, and cache it locally (save/load/update/delete/reset). Used for balancing tables and static game data distributed over CDN.",
+  "capabilities": [
+    "route chart-table and chart-content retrieval questions",
+    "explain local caching of chart data and its lifecycle",
+    "relate charts to probability cards (both under Backend.CDN)"
+  ],
+  "prerequisites": [
+    "Chart tables and files are registered/selected in the BACKND console",
+    "SDK is initialized"
+  ],
+  "common_pitfalls": [
+    "Expecting charts without a selected chart file (excluded from the list)",
+    "Calling chart-table via SendQueue (not supported)",
+    "Treating local cache as always fresh without update"
+  ],
+  "related_topics": [
+    "probability",
+    "game-information",
+    "knowhow"
+  ],
+  "keywords": [
+    "chart",
+    "차트",
+    "cdn",
+    "backend.cdn.content",
+    "chart table",
+    "local cache"
+  ],
+  "verification_required_for": [
+    "exact Backend.CDN.Content method names",
+    "current local-cache API",
+    "chart file/console requirements"
+  ],
+  "verification_strategy": [
+    "Use https://docs.backnd.com plus the source route before generating chart retrieval/caching code.",
+    "Confirm console chart-file selection requirements upstream."
+  ],
+  "last_reviewed": "2026-06-09",
+  "public_notes": [
+    "Charts are CDN-distributed design data under Backend.CDN.Content.",
+    "Local cache lifecycle (save/load/update/delete/reset) must be managed explicitly."
+  ]
+}

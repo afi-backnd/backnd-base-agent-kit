@@ -5,7 +5,8 @@
   "route_family_id": "startup",
   "route_family": "/sdk-docs/backend/base/start-up",
   "source_routes": [
-    "/sdk-docs/backend/base/start-up"
+    "/sdk-docs/backend/base/start-up",
+    "/sdk-docs/backend/base/setting-inspector"
   ],
   "summary": "Covers the first-run Unity integration path for BACKND Base: SDK download, Unity package import, console credential setup, a minimal initialization script, and play-mode verification.",
   "capabilities": [

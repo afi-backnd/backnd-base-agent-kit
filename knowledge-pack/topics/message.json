@@ -1,0 +1,55 @@
+{
+  "id": "message",
+  "title": "BACKND Base message (player-to-player notes)",
+  "product": "backnd-base",
+  "route_family_id": "message",
+  "route_family": "/sdk-docs/backend/base/message",
+  "source_routes": [
+    "/sdk-docs/backend/base/message/sending",
+    "/sdk-docs/backend/base/message/sent/list-sent",
+    "/sdk-docs/backend/base/message/sent/delete-sent",
+    "/sdk-docs/backend/base/message/received/list-received",
+    "/sdk-docs/backend/base/message/received/delete-received"
+  ],
+  "summary": "Player-to-player messages (notes): send a message to a gamer inDate (SendMessage), list sent and received messages, and delete sent or received messages. Message length is capped by console configuration.",
+  "capabilities": [
+    "route note/message send and list questions",
+    "distinguish sent vs received message management",
+    "note the console-configured length limit"
+  ],
+  "prerequisites": [
+    "SDK is initialized and the user is logged in",
+    "Recipient gamer inDate is known when sending"
+  ],
+  "common_pitfalls": [
+    "Exceeding the console-configured message length",
+    "Confusing sent vs received list/delete operations",
+    "Confusing player messages with the post/mailbox system"
+  ],
+  "related_topics": [
+    "friend",
+    "post",
+    "find-user"
+  ],
+  "keywords": [
+    "message",
+    "쪽지",
+    "sendmessage",
+    "sent",
+    "received"
+  ],
+  "verification_required_for": [
+    "exact method names and parameters",
+    "console-configured length limit",
+    "delete semantics"
+  ],
+  "verification_strategy": [
+    "Use https://docs.backnd.com plus the source route before generating message code.",
+    "Confirm the length limit and delete behavior upstream."
+  ],
+  "last_reviewed": "2026-06-09",
+  "public_notes": [
+    "Messages are 1:1 player notes, distinct from the post/mailbox system.",
+    "Length is limited by console configuration."
+  ]
+}

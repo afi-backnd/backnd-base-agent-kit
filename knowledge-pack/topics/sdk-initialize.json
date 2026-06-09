@@ -5,7 +5,8 @@
   "route_family_id": "sdk-initialize",
   "route_family": "/sdk-docs/backend/base/sdk-initialize",
   "source_routes": [
-    "/sdk-docs/backend/base/sdk-initialize"
+    "/sdk-docs/backend/base/sdk-initialize",
+    "/sdk-docs/backend/base/multi-project-initialize"
   ],
   "summary": "Describes the explicit SDK initialization area, including synchronous and asynchronous initialization paths, optional custom settings, and basic success and failure patterns.",
   "capabilities": [

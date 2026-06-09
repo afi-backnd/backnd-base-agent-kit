@@ -1,0 +1,61 @@
+{
+  "id": "common-errors",
+  "title": "BACKND Base common error handling patterns",
+  "product": "backnd-base",
+  "route_family_id": "common-errors",
+  "route_family": "/sdk-docs/backend/base/common-errors",
+  "source_routes": [
+    "/sdk-docs/backend/base/common-errors/for-blocking-device",
+    "/sdk-docs/backend/base/common-errors/on-server",
+    "/sdk-docs/backend/base/common-errors/functions/bad-accesstoken",
+    "/sdk-docs/backend/base/common-errors/functions/too-many-request",
+    "/sdk-docs/backend/base/common-errors/functions/maintenance-server",
+    "/sdk-docs/backend/base/common-errors/handlers/other-device-login-detection",
+    "/sdk-docs/backend/base/common-errors/handlers/maintenance",
+    "/sdk-docs/backend/base/common-errors/handlers/unity-main-thread-request"
+  ],
+  "summary": "Operational error-handling patterns for recurring runtime situations: device block (403), bad/expired accessToken (401) and token reissue, maintenance, rate limiting (429), Unity main-thread handling, and other-device login detection. Complements the all-errors catalog with how-to-respond guidance and handler registration.",
+  "capabilities": [
+    "map a recurring error situation to a recommended handling flow",
+    "explain token reissue (RefreshTheBackendToken) and re-login on bad accessToken",
+    "describe handler registration for maintenance, rate limit, and other-device login",
+    "distinguish this how-to-handle topic from the all-errors code catalog"
+  ],
+  "prerequisites": [
+    "A concrete error situation or status code is observed",
+    "Login/token context exists when handling auth-related errors"
+  ],
+  "common_pitfalls": [
+    "Treating bad accessToken as fatal instead of reissuing the token or re-logging in",
+    "Not registering the relevant handler before the error situation occurs",
+    "Calling Unity APIs off the main thread inside a callback"
+  ],
+  "related_topics": [
+    "all-errors",
+    "user-auth",
+    "notify"
+  ],
+  "keywords": [
+    "common errors",
+    "bad accesstoken",
+    "blocked device",
+    "maintenance",
+    "too many request",
+    "handler",
+    "refreshthebackendtoken"
+  ],
+  "verification_required_for": [
+    "exact error wording and status/error codes",
+    "current handler names and registration API",
+    "current token-reissue method names"
+  ],
+  "verification_strategy": [
+    "Use https://docs.backnd.com plus the source route and cross-check live payloads before quoting exact error text.",
+    "Confirm handler and token-reissue method names from the official page before generating code."
+  ],
+  "last_reviewed": "2026-06-09",
+  "public_notes": [
+    "This topic is about how to respond to errors; all-errors is the code catalog.",
+    "Handler and token APIs are mutable; verify before generating production handlers."
+  ]
+}

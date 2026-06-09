@@ -1,0 +1,54 @@
+{
+  "id": "cash",
+  "title": "BACKND Base cash / TBC (discontinued)",
+  "product": "backnd-base",
+  "route_family_id": "cash",
+  "route_family": "/sdk-docs/backend/base/cash",
+  "source_routes": [
+    "/sdk-docs/backend/base/cash/search-cash-item",
+    "/sdk-docs/backend/base/cash/recharge-tbc",
+    "/sdk-docs/backend/base/cash/purchase-using-tbc",
+    "/sdk-docs/backend/base/cash/get-tbc"
+  ],
+  "summary": "Game cash items and TBC (The Backend Cash): list cash items, recharge TBC, purchase with TBC, and query TBC balance. Note: TBC has been discontinued due to receipt-verification modernization and is only usable on SDK 5.18.7 and below.",
+  "capabilities": [
+    "recognize cash/TBC questions and flag the discontinuation",
+    "route legacy TBC integrations to the cash family",
+    "redirect new purchase work to the receipt topic"
+  ],
+  "prerequisites": [
+    "An existing integration targets SDK 5.18.7 or below for TBC",
+    "Cash items are configured in the console"
+  ],
+  "common_pitfalls": [
+    "Recommending TBC for new work (discontinued; SDK 5.18.7 or below only)",
+    "Assuming TBC works on current SDK versions",
+    "Confusing TBC purchase with store receipt validation"
+  ],
+  "related_topics": [
+    "receipt",
+    "function-product",
+    "all-errors"
+  ],
+  "keywords": [
+    "cash",
+    "tbc",
+    "the backend cash",
+    "getproductlist",
+    "recharge",
+    "discontinued"
+  ],
+  "verification_required_for": [
+    "exact discontinuation scope and SDK version cutoff",
+    "whether any TBC API remains callable on the target SDK"
+  ],
+  "verification_strategy": [
+    "Use https://docs.backnd.com plus the source route to confirm the TBC discontinuation notice and version cutoff before advising.",
+    "For new purchase features, route to the receipt topic instead of TBC."
+  ],
+  "last_reviewed": "2026-06-09",
+  "public_notes": [
+    "TBC is discontinued and limited to SDK 5.18.7 and below; do not recommend for new work.",
+    "Use the receipt topic for current purchase/verification flows."
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "id": "leaderboard",
+  "title": "BACKND Base leaderboard flows",
+  "product": "backnd-base",
+  "route_family_id": "leaderboard",
+  "route_family": "/sdk-docs/backend/base/leaderboard",
+  "source_routes": [
+    "/sdk-docs/backend/base/leaderboard/difference-to-rank",
+    "/sdk-docs/backend/base/leaderboard/user/get-leaderboard",
+    "/sdk-docs/backend/base/leaderboard/user/update",
+    "/sdk-docs/backend/base/leaderboard/user/get-list",
+    "/sdk-docs/backend/base/leaderboard/user/get-mine",
+    "/sdk-docs/backend/base/leaderboard/guild/get-leaderboard",
+    "/sdk-docs/backend/base/leaderboard/guild/update-by-goods",
+    "/sdk-docs/backend/base/leaderboard/guild/update-by-meta"
+  ],
+  "summary": "Covers the current BACKND Base leaderboard system for user and guild ranking, including group-segmented leaderboards, score and data updates that refresh the leaderboard, list and personal lookups, rewards, and historical leaderboard queries. This is the recommended replacement for the legacy URank (rank) feature.",
+  "capabilities": [
+    "route ranking questions to the current leaderboard family instead of legacy URank",
+    "distinguish user leaderboards from guild leaderboards",
+    "explain group-segmented leaderboards and unmarshalled return values",
+    "identify update-and-refresh flows versus read-only lookups",
+    "point URank migration questions to the leaderboard difference page"
+  ],
+  "prerequisites": [
+    "SDK initialization and login are complete before leaderboard calls",
+    "The target leaderboard exists in the BACKND console with its uuid available",
+    "The backing table row exists when an update-and-refresh flow is used"
+  ],
+  "common_pitfalls": [
+    "Using legacy URank functions for new work instead of Backend.Leaderboard",
+    "Mixing URank and Leaderboard update calls so a score lands in the NULL group as well as the segmented group",
+    "Assuming a guild leaderboard update path is identical to the user path",
+    "Expecting the /leaderboard index path to be a page; route to a specific child instead"
+  ],
+  "related_topics": [
+    "rank",
+    "game-information",
+    "player-data",
+    "all-errors"
+  ],
+  "keywords": [
+    "leaderboard",
+    "리더보드",
+    "getleaderboards",
+    "updatemydataandrefreshleaderboard",
+    "group leaderboard",
+    "guild leaderboard",
+    "extra data",
+    "reward"
+  ],
+  "verification_required_for": [
+    "exact leaderboard method names and signatures",
+    "current group-segmentation behavior",
+    "current reward and historical-leaderboard behavior"
+  ],
+  "verification_strategy": [
+    "Use https://docs.backnd.com plus the narrower source route before generating leaderboard update or reward code.",
+    "Confirm user versus guild method differences from the official page rather than assuming symmetry."
+  ],
+  "last_reviewed": "2026-06-09",
+  "public_notes": [
+    "Leaderboard is the current ranking system; the older rank/URank pages are unpublished and return 404.",
+    "Use leaderboard/difference-to-rank to guide migration away from URank."
+  ]
+}

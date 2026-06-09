@@ -1,0 +1,49 @@
+{
+  "id": "game-log",
+  "title": "BACKND Base game log",
+  "product": "backnd-base",
+  "route_family_id": "game-log",
+  "route_family": "/sdk-docs/backend/base/game-log",
+  "source_routes": [
+    "/sdk-docs/backend/base/game-log/insert"
+  ],
+  "summary": "Store game logs from the client with InsertLogV2 (logType plus a Param payload). V2 incurs only a call cost and no DB write throughput, unlike the legacy InsertLog. Logs are viewable in the BACKND console.",
+  "capabilities": [
+    "route game-log questions to InsertLogV2",
+    "explain the V2 cost model (no DB write throughput)",
+    "describe logType plus Param payload structure"
+  ],
+  "prerequisites": [
+    "SDK is initialized and the user is logged in",
+    "A logType convention is defined for the game"
+  ],
+  "common_pitfalls": [
+    "Using legacy InsertLog (incurs DB write cost) instead of InsertLogV2",
+    "Overloading a single logType for unrelated events"
+  ],
+  "related_topics": [
+    "player-data",
+    "knowhow",
+    "all-errors"
+  ],
+  "keywords": [
+    "game log",
+    "게임 로그",
+    "insertlogv2",
+    "logtype"
+  ],
+  "verification_required_for": [
+    "exact method signature and Param shape",
+    "current cost model details",
+    "console log retention behavior"
+  ],
+  "verification_strategy": [
+    "Use https://docs.backnd.com plus the source route before generating logging code.",
+    "Prefer InsertLogV2; confirm the current cost model upstream."
+  ],
+  "last_reviewed": "2026-06-09",
+  "public_notes": [
+    "InsertLogV2 avoids DB write throughput cost; legacy InsertLog does not.",
+    "Logs are inspected in the console."
+  ]
+}
